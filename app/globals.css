@@ -1282,9 +1282,8 @@ body.zh .footer .heritage-line { font-family: var(--hanzi); font-style: normal; 
   letter-spacing: 0.04em;
   opacity: 0.58;
 }
-  display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px;
-  font-family: var(--mono); font-size: 11px; opacity: 0.75;
-}
+  
+
 
 /* CART DRAWER ---------------------------------------------------------- */
 .cart-drawer-bg {
