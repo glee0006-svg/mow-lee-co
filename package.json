@@ -1,0 +1,25 @@
+{
+  "name": "mow-lee-co",
+  "version": "1.0.0",
+  "private": true,
+  "description": "茂利號腊味 — Mow Lee & Co. Traditional Chinese cured meats since 1856.",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "next": "14.2.15",
+    "react": "18.3.1",
+    "react-dom": "18.3.1",
+    "square": "^38.1.0"
+  },
+  "devDependencies": {
+    "eslint": "8.57.1",
+    "eslint-config-next": "14.2.15"
+  },
+  "engines": {
+    "node": ">=18.17.0"
+  }
+}
