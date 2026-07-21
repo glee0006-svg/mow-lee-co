@@ -26,6 +26,9 @@ const PROD_DETAIL = {
   g2:  { en: "Salt-cured fish — a Cantonese pantry essential. Steam with pork patty, fold into fried rice, or use sparingly to deepen any savoury braise.",
          zh: "鹹魚——粵廚必備。蒸豬肉餅、炒飯、或入紅燒鹵汁少許，皆能添香。" },
 };
+const PRODUCT_IMAGES = {
+  d08: "/Duck Gizzard.jpg",
+};
 
 export default function Shop() {
   const { addToCart, setQty, cart, addedFlash } = useApp();
@@ -102,8 +105,11 @@ export default function Shop() {
                   onKeyDown={(e) => { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); setDetail(it); } }}
                 >
                   <div className="thumb" onClick={(e) => e.stopPropagation()}>
-                    <ImageSlot id={`thumb-${it.id}`} placeholder={it.en} />
-                  </div>
+<ImageSlot
+  id={`thumb-${it.id}`}
+  src={PRODUCT_IMAGES[it.id]}
+  placeholder={it.en}
+/>                  </div>
                   <div className="name">
                     <span className="zh">{it.zh}</span>
                     <span className="en">{it.en}</span>
