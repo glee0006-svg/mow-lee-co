@@ -156,7 +156,11 @@ export default function Shop() {
           <div className="prod-modal" role="dialog" aria-modal="true" onClick={(e) => e.stopPropagation()}>
             <button className="prod-modal-x" onClick={() => setDetail(null)} aria-label="Close">✕</button>
             <div className="prod-modal-img">
-              <ImageSlot id={`modal-${detail.id}`} placeholder={detail.en} />
+              <ImageSlot
+  id={`modal-${detail.id}`}
+  src={PRODUCT_IMAGES[detail.id]}
+  placeholder={detail.en}
+/>
             </div>
             <div className="prod-modal-body">
               <div className="prod-modal-eyebrow">
