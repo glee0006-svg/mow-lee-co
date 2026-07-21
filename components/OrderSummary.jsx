@@ -75,8 +75,8 @@ export default function OrderSummary({ editable = false, shipping = 0, taxRate =
           <span>${subtotal.toFixed(2)}</span>
         </div>
         <div className="os-row">
-          <span><span className="lang-en">Pickup</span><span className="lang-zh">自取</span></span>
-          <span>$0.00</span>
+          <span><span className="lang-en">Shipping</span><span className="lang-zh">郵寄</span></span>
+          <span>TBD</span>
         </div>
         <div className="os-row">
           <span><span className="lang-en">Estimated tax</span><span className="lang-zh">預估稅項</span></span>
