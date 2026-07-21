@@ -28,6 +28,7 @@ const PROD_DETAIL = {
 };
 const PRODUCT_IMAGES = {
   d08: "/Duck Gizzard.jpg",
+  d03: "/Salt Duck Leg.jpg",
 };
 
 export default function Shop() {
