@@ -27,8 +27,8 @@ const PROD_DETAIL = {
          zh: "鹹魚——粵廚必備。蒸豬肉餅、炒飯、或入紅燒鹵汁少許，皆能添香。" },
 };
 const PRODUCT_IMAGES = {
-  d08: "/duck gizzard.jpg",
-  d03: "/salt duck leg.jpg",
+  d08: "/Duck Gizzard.jpg",
+  d03: "/Salt Duck Leg.jpg",
   d04: "/soy-test.jpg",
   d05: "/whole-cured-duck.jpg",
 };
