@@ -218,7 +218,7 @@ function StepPickup({ value, onChange, onSubmit, onBack, pickupTimes }) {
 
 <div className="form-grid">
 
-<div className="form-grid">
+
   <FieldText
     label={{ en: "Street Address", zh: "街道地址" }}
     required
