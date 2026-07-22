@@ -9,8 +9,9 @@
  */
 
 const STEPS = [
-  { key: "info", en: "Information", zh: "客戶資料" },
-  { key: "payment", en: "Payment", zh: "付款" },
+  { key: "info", en: "Information", zh: "客户资料" },
+  { key: "delivery", en: "Delivery", zh: "送货资料" },
+  { key: "review", en: "Review", zh: "確認訂單" },
   { key: "done", en: "Confirmed", zh: "已確認" },
 ];
 
