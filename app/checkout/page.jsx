@@ -201,8 +201,13 @@ function StepPickup({ value, onChange, onSubmit, onBack, pickupTimes }) {
   return (
     <form className="checkout-step-card" onSubmit={onSubmit} noValidate>
       <header className="step-head">
-        <h3>
-          <div className="form-grid">
+  <h3>
+    <span className="lang-en">Delivery Information</span>
+    <span className="lang-zh">送貨資料</span>
+  </h3>
+</header>
+
+<div className="form-grid">
   <FieldText
     label={{ en: "Street Address", zh: "街道地址" }}
     required
