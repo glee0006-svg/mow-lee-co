@@ -150,6 +150,15 @@ export default function CheckoutPage() {
   onBack={() => setStep("info")}
   pickupTimes={PICKUP_TIMES}
 />}
+                  {step === "review" && (
+  <StepReview
+    customer={customer}
+    pickup={pickup}
+    total={total}
+    onBack={() => setStep("delivery")}
+    onSubmit={() => advance("payment")}
+  />
+)}
                   
                 </div>
                 <OrderSummary
@@ -424,5 +433,44 @@ function EmptyView() {
         <span className="arrow">→</span>
       </Link>
     </div>
+  );
+}
+function StepReview({ customer, pickup, total, onBack, onSubmit }) {
+  return (
+    <form className="checkout-step-card" onSubmit={(e) => {
+      e.preventDefault();
+      onSubmit();
+    }}>
+      <header className="step-head">
+        <h3>Review Your Order</h3>
+        <p>Please verify your information before proceeding to payment.</p>
+      </header>
+
+      <div className="checkout-review">
+        <p><strong>Name:</strong> {customer.name}</p>
+        <p><strong>Email:</strong> {customer.email}</p>
+        <p><strong>Phone:</strong> {customer.phone}</p>
+
+        <hr />
+
+        <p><strong>Delivery Address</strong></p>
+        <p>{pickup.street}</p>
+        <p>{pickup.city}, {pickup.state} {pickup.zip}</p>
+
+        <hr />
+
+        <p><strong>Total:</strong> ${total.toFixed(2)}</p>
+      </div>
+
+      <footer className="step-foot">
+        <button type="button" className="btn ghost step-back" onClick={onBack}>
+          ← Back
+        </button>
+
+        <button type="submit" className="btn solid">
+          Continue to Payment →
+        </button>
+      </footer>
+    </form>
   );
 }
