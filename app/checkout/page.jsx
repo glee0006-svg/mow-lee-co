@@ -319,8 +319,12 @@ function StepPayment({ customer, pickup, total, paying, setPaying, payError, set
           <span className="lang-zh">付款</span>
         </h3>
         <p>
-          <span className="lang-en">Pay securely with any major card. Your order will be prepared for pickup on <strong>{pickup.date}</strong> at <strong>{pickup.time}</strong>.</span>
-          <span className="lang-zh">以信用卡安全付款。您的訂單將於 <strong>{pickup.date}</strong> <strong>{pickup.time}</strong> 預備自取。</span>
+          <span className="lang-en">
+  Pay securely with any major card. Your order will be delivered after your payment is confirmed.
+</span>
+          <span className="lang-zh">
+  以信用卡安全付款。付款確認後，我們將安排送貨。
+</span>
         </p>
       </header>
 
@@ -334,13 +338,14 @@ function StepPayment({ customer, pickup, total, paying, setPaying, payError, set
         </div>
         <div>
           <div className="payment-summary-label">
-            <span className="lang-en">Pickup</span>
-            <span className="lang-zh">自取</span>
+            <span className="lang-en">Delivery</span>
+            <span className="lang-zh">送貨</span>
           </div>
           <div className="payment-summary-value">
-            {pickup.date}<br />
-            {pickup.time}<br />
-            <span style={{ opacity: 0.7 }}>774 Commercial St, SF</span>
+            
+<span style={{ opacity: 0.7 }}>
+  {pickup.street}, {pickup.city}, {pickup.state} {pickup.zip}
+</span>
           </div>
         </div>
       </div>
