@@ -60,7 +60,7 @@ export default function CheckoutPage() {
   }, [cart.length, isReady, step]);
 
   const advance = (next) => {
-    const order = ["info", "pickup", "payment"];
+    const order = ["info", "payment"];
     const ni = order.indexOf(next);
     setStep(next);
     setMaxReached((m) => Math.max(m, ni));
@@ -68,7 +68,7 @@ export default function CheckoutPage() {
 
   const handleInfoSubmit = (e) => {
     e.preventDefault();
-    advance("pickup");
+    advance("payment");
   };
   const handlePickupSubmit = (e) => {
     e.preventDefault();
@@ -143,8 +143,8 @@ export default function CheckoutPage() {
               <div className="checkout-grid">
                 <div className="checkout-step">
                   {step === "info"    && <StepInfo    value={customer} onChange={setCustomer} onSubmit={handleInfoSubmit} />}
-                  {step === "pickup"  && <StepPickup  value={pickup}   onChange={setPickup}   onSubmit={handlePickupSubmit} onBack={() => setStep("info")} pickupTimes={PICKUP_TIMES} />}
-                  {step === "payment" && <StepPayment customer={customer} pickup={pickup} total={total} paying={paying} setPaying={setPaying} payError={payError} setPayError={setPayError} onPay={handlePay} onBack={() => setStep("pickup")} />}
+                  {step === "payment" && <StepPayment customer={customer} pickup={pickup} total={total} paying={paying} setPaying={setPaying} payError={payError} setPayError={setPayError} onPay={handlePay} onBack={() => setStep("info")} />}
+                  
                 </div>
                 <OrderSummary editable={step === "info"} taxRate={TAX_RATE} />
               </div>
