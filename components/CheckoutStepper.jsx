@@ -9,10 +9,9 @@
  */
 
 const STEPS = [
-  { key: "info",    en: "Information", zh: "客戶資料" },
-  { key: "pickup",  en: "Pickup",      zh: "自取詳情" },
-  { key: "payment", en: "Payment",     zh: "付款" },
-  { key: "done",    en: "Confirmed",   zh: "已確認" },
+  { key: "info", en: "Information", zh: "客戶資料" },
+  { key: "payment", en: "Payment", zh: "付款" },
+  { key: "done", en: "Confirmed", zh: "已確認" },
 ];
 
 export default function CheckoutStepper({ current, onStep, maxReached = 0 }) {
