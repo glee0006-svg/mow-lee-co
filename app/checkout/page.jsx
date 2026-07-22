@@ -37,7 +37,15 @@ export default function CheckoutPage() {
   const [maxReached, setMaxReached] = useState(0);
 
   const [customer, setCustomer] = useState({ name: "", email: "", phone: "" });
-  const [pickup,   setPickup]   = useState({ date: todayISO(), time: PICKUP_TIMES[2], notes: "" });
+  const [pickup, setPickup] = useState({
+  street: "",
+  city: "",
+  state: "",
+  zip: "",
+  date: todayISO(),
+  time: PICKUP_TIMES[2],
+  notes: ""
+});
 
   const [paying,   setPaying]   = useState(false);
   const [payError, setPayError] = useState(null);
@@ -194,14 +202,59 @@ function StepPickup({ value, onChange, onSubmit, onBack, pickupTimes }) {
     <form className="checkout-step-card" onSubmit={onSubmit} noValidate>
       <header className="step-head">
         <h3>
-          <span className="lang-en">Pickup Details</span>
-          <span className="lang-zh">自取詳情</span>
-        </h3>
-        <p>
-          <span className="lang-en">All orders are picked up at our Chinatown counter at <strong>774 Commercial Street, San Francisco</strong>. We're open 10am – 6pm, every day.</span>
-          <span className="lang-zh">所有訂單均於本號自取——<strong>三藩市 Commercial 街七七四號</strong>。每日上午十時至下午六時營業。</span>
-        </p>
-      </header>
+          <div className="form-grid">
+  <FieldText
+    label={{ en: "Street Address", zh: "街道地址" }}
+    required
+    value={value.street}
+    onChange={(v) => set("street", v)}
+  />
+
+  <FieldText
+    label={{ en: "City", zh: "城市" }}
+    required
+    value={value.city}
+    onChange={(v) => set("city", v)}
+  />
+
+  <FieldText
+    label={{ en: "State", zh: "州" }}
+    required
+    value={value.state}
+    onChange={(v) => set("state", v)}
+  />
+
+  <FieldText
+    label={{ en: "ZIP Code", zh: "郵遞區號" }}
+    required
+    value={value.zip}
+    onChange={(v) => set("zip", v)}
+  />
+
+  <FieldTextarea
+    label={{ en: "Delivery Instructions (optional)", zh: "送貨備註（可選）" }}
+    value={value.notes}
+    onChange={(v) => set("notes", v)}
+  />
+</div>
+  <footer className="step-foot">
+  <button type="button" className="btn ghost step-back" onClick={onBack}>
+    <span className="arrow back">←</span>
+    <span className="lang-en">Back</span>
+    <span className="lang-zh">返回</span>
+  </button>
+
+  <button type="submit" className="btn solid">
+    <span className="lang-en">Continue to Payment</span>
+    <span className="lang-zh">下一步・付款</span>
+    <span className="arrow">→</span>
+  </button>
+</footer>
+
+</form>        
+        
+        
+     
       <div className="form-grid">
         <FieldText type="date" label={{ en: "Pickup Date", zh: "自取日期" }} required min={todayISO()} value={value.date} onChange={(v) => set("date", v)} />
         <FieldSelect label={{ en: "Pickup Time", zh: "自取時段" }} required value={value.time} onChange={(v) => set("time", v)} options={pickupTimes} />
