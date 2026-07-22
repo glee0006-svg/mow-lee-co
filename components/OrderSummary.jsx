@@ -2,6 +2,12 @@
 
 import { useApp } from "@/lib/store";
 import ImageSlot from "./ImageSlot";
+const PRODUCT_IMAGES = {
+  d08: "/Duck Gizzard.jpg",
+  d03: "/Salt Duck Leg.jpg",
+  d04: "/soy-duck-leg.jpg",
+  d05: "/whole-cured-duck.jpg",
+};
 
 /**
  * Order summary sidebar — used by every checkout step. Sticky on desktop,
@@ -37,7 +43,11 @@ export default function OrderSummary({ editable = false, shipping = 0, taxRate =
         {cart.map((l) => (
           <li key={l.id} className="os-line">
             <div className="os-line-img">
-              <ImageSlot id={`os-${l.id}`} placeholder={l.en} />
+              <ImageSlot
+  id={`os-${l.id}`}
+  src={PRODUCT_IMAGES[l.id]}
+  placeholder={l.en}
+/>
             </div>
             <div className="os-line-info">
               <div className="os-line-zh">{l.zh}</div>
