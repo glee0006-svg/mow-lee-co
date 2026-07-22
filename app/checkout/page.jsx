@@ -200,8 +200,12 @@ function StepInfo({ value, onChange, onSubmit }) {
           <span className="lang-zh">客戶資料</span>
         </h3>
         <p>
-          <span className="lang-en">We'll use this to send your order confirmation and reach you about your pickup.</span>
-          <span className="lang-zh">我們會以此資料寄送訂單確認，並就自取事宜與您聯絡。</span>
+          <span className="lang-en">
+We'll use this to send your order confirmation and delivery updates.
+</span>
+          <span className="lang-zh">
+我們會以此資料寄送訂單確認，並提供送貨資訊。
+</span>
         </p>
       </header>
       <div className="form-grid">
