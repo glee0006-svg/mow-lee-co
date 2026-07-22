@@ -72,16 +72,16 @@ function Confirmation({ order }) {
       <div className="success-grid">
         <div className="success-card pickup-card">
           <div className="success-card-eyebrow">
-            <span className="lang-en">Pickup Reminder · 自取提示</span>
-            <span className="lang-zh">自取提示</span>
+            <span className="lang-en">Delivery Details</span>
+            <span className="lang-zh">送貨資訊</span>
           </div>
           <div className="pickup-when">
             <div className="pickup-date">{order.pickup.date}</div>
             <div className="pickup-time">{order.pickup.time}</div>
           </div>
           <div className="pickup-where">
-            <strong>774 Commercial Street</strong><br />
-            San Francisco, CA 94108
+            <strong>{order.pickup.street}</strong><br />
+{order.pickup.city}, {order.pickup.state} {order.pickup.zip}
           </div>
           {order.pickup.notes && (
             <div className="pickup-notes">
