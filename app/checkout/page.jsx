@@ -159,7 +159,19 @@ export default function CheckoutPage() {
     onSubmit={() => advance("payment")}
   />
 )}
-                  
+         {step === "payment" && (
+  <StepPayment
+    customer={customer}
+    pickup={pickup}
+    total={total}
+    paying={paying}
+    setPaying={setPaying}
+    payError={payError}
+    setPayError={setPayError}
+    onPay={handlePay}
+    onBack={() => setStep("review")}
+  />
+)}         
                 </div>
                 <OrderSummary
   editable={step === "info" || step === "delivery"}
