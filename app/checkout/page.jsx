@@ -143,10 +143,19 @@ export default function CheckoutPage() {
               <div className="checkout-grid">
                 <div className="checkout-step">
                   {step === "info"    && <StepInfo    value={customer} onChange={setCustomer} onSubmit={handleInfoSubmit} />}
-                  {step === "payment" && <StepPayment customer={customer} pickup={pickup} total={total} paying={paying} setPaying={setPaying} payError={payError} setPayError={setPayError} onPay={handlePay} onBack={() => setStep("info")} />}
+                  {step === "delivery" && <StepPickup
+  value={pickup}
+  onChange={setPickup}
+  onSubmit={handlePickupSubmit}
+  onBack={() => setStep("info")}
+  pickupTimes={PICKUP_TIMES}
+/>}
                   
                 </div>
-                <OrderSummary editable={step === "info"} taxRate={TAX_RATE} />
+                <OrderSummary
+  editable={step === "info" || step === "delivery"}
+  taxRate={TAX_RATE}
+/>
               </div>
             </>
           )}
