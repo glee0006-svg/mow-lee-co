@@ -260,24 +260,7 @@ function StepPickup({ value, onChange, onSubmit, onBack, pickupTimes }) {
         
         
      
-      <div className="form-grid">
-        <FieldText type="date" label={{ en: "Pickup Date", zh: "自取日期" }} required min={todayISO()} value={value.date} onChange={(v) => set("date", v)} />
-        <FieldSelect label={{ en: "Pickup Time", zh: "自取時段" }} required value={value.time} onChange={(v) => set("time", v)} options={pickupTimes} />
-        <FieldTextarea label={{ en: "Special Instructions (optional)", zh: "備註（可選）" }} value={value.notes} onChange={(v) => set("notes", v)} placeholder="Allergies, gift wrap, time changes, etc." rows={3} />
-      </div>
-      <footer className="step-foot">
-        <button type="button" className="btn ghost step-back" onClick={onBack}>
-          <span className="arrow back">←</span>
-          <span className="lang-en">Back</span>
-          <span className="lang-zh">返回</span>
-        </button>
-        <button type="submit" className="btn solid">
-          <span className="lang-en">Continue to Payment</span>
-          <span className="lang-zh">下一步 · 付款</span>
-          <span className="arrow">→</span>
-        </button>
-      </footer>
-    </form>
+     
   );
 }
 
