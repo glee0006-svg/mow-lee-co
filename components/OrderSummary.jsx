@@ -5,7 +5,7 @@ import ImageSlot from "./ImageSlot";
 const PRODUCT_IMAGES = {
   d08: "/Duck Gizzard.jpg",
   d03: "/Salt Duck Leg.jpg",
-  d04: "/soy-duck-leg.jpg",
+  d04: "/soy-test.jpg",
   d05: "/whole-cured-duck.jpg",
 };
 
