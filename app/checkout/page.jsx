@@ -60,7 +60,7 @@ export default function CheckoutPage() {
   }, [cart.length, isReady, step]);
 
   const advance = (next) => {
-    const order = ["info", "payment"];
+    const order = ["info", "delivery", "review"];
     const ni = order.indexOf(next);
     setStep(next);
     setMaxReached((m) => Math.max(m, ni));
@@ -68,11 +68,11 @@ export default function CheckoutPage() {
 
   const handleInfoSubmit = (e) => {
     e.preventDefault();
-    advance("payment");
+    advance("delivery");
   };
   const handlePickupSubmit = (e) => {
     e.preventDefault();
-    advance("payment");
+    advance("review");
   };
 
   const handlePay = async (sourceId) => {
