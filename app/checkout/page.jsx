@@ -291,7 +291,7 @@ function StepPickup({ value, onChange, onSubmit, onBack, pickupTimes }) {
   </button>
 
   <button type="submit" className="btn solid">
-    <span className="lang-en">Continue to Payment</span>
+    <span className="lang-en">Continue to Review</span>
     <span className="lang-zh">下一步・付款</span>
     <span className="arrow">→</span>
   </button>
