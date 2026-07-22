@@ -205,7 +205,18 @@ function StepPickup({ value, onChange, onSubmit, onBack, pickupTimes }) {
     <span className="lang-en">Delivery Information</span>
     <span className="lang-zh">送貨資料</span>
   </h3>
+
+  <p>
+    <span className="lang-en">
+      Please enter your delivery address below.
+    </span>
+    <span className="lang-zh">
+      請填寫您的送貨地址。
+    </span>
+  </p>
 </header>
+
+<div className="form-grid">
 
 <div className="form-grid">
   <FieldText
