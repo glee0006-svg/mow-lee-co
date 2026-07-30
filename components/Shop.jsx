@@ -119,6 +119,7 @@ export default function Shop() {
   id={`thumb-${it.id}`}
   src={PRODUCT_IMAGES[it.id]}
   placeholder={it.en}
+  gallery={false}
 />                  </div>
                   <div className="name">
                     <span className="zh">{it.zh}</span>
@@ -170,6 +171,7 @@ export default function Shop() {
   id={`modal-${detail.id}`}
   src={PRODUCT_IMAGES[detail.id]}
   placeholder={detail.en}
+  gallery
 />
             </div>
             <div className="prod-modal-body">
