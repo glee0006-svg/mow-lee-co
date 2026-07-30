@@ -29,7 +29,14 @@ const PROD_DETAIL = {
 const PRODUCT_IMAGES = {
   d08: "/Duck Gizzard.jpg",
   d03: "/Salt Duck Leg.jpg",
-  d04: "/soy-test.jpg",
+
+  d04: [
+    "/Soy Duck Leg 1.png",
+    "/Soy Duck Leg 2.png",
+    "/Soy Duck Leg 3.png",
+    "/Soy Duck Leg 4.png",
+  ],
+
   d05: "/whole-cured-duck.jpg",
 };
 
