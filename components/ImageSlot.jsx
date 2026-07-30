@@ -55,6 +55,15 @@ const [current, setCurrent] = useState(0);
         />
      {images.length > 1 && (
   <button
+    type="button"
+style={{
+  position: "absolute",
+  left: 16,
+  top: "50%",
+  transform: "translate(0, -50%)",
+  zIndex: 2,
+  cursor: "pointer",
+}}
     onClick={() =>
       setCurrent((current - 1 + images.length) % images.length)
     }
