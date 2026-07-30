@@ -67,9 +67,9 @@ const [current, setCurrent] = useState(0);
   type="button"
   style={{
     position: "absolute",
-    right: 8,
+    right: 16,
     top: "50%",
-    transform: "translateY(-50%)",
+    transform: "translate(0, -50%)",
     zIndex: 2,
     cursor: "pointer",
   }}
