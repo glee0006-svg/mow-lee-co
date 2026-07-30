@@ -116,10 +116,10 @@ export default function Shop() {
                 >
                   <div className="thumb" onClick={(e) => e.stopPropagation()}>
 <ImageSlot
-  id={`thumb-${it.id}`}
-  src={PRODUCT_IMAGES[it.id]}
-  placeholder={it.en}
-  gallery={false}
+  id={`modal-${detail.id}`}
+  src={PRODUCT_IMAGES[detail.id]}
+  placeholder={detail.en}
+  gallery={true}
 />                  </div>
                   <div className="name">
                     <span className="zh">{it.zh}</span>
