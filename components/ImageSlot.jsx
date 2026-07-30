@@ -1,4 +1,6 @@
 "use client";
+
+import { useState } from "react";
 /**
  * Production ImageSlot.
  *
@@ -24,17 +26,61 @@ export default function ImageSlot({
     shape === "rounded" ? radius :
     0;
 
-  if (src) {
+  const images = Array.isArray(src) ? src : src ? [src] : [];
+const [current, setCurrent] = useState(0);
+  if (images.length) {
     return (
-      <div className="image-slot filled" style={{ ...style, borderRadius, overflow: "hidden", position: "absolute", inset: 0 }}>
+      <div
+  className="image-slot filled"
+  style={{
+    ...style,
+    borderRadius,
+    overflow: "hidden",
+    position: "absolute",
+    inset: 0,
+  }}
+>
         <img
-          src={src}
+          src={images[current]}
           alt={alt || placeholder}
           loading="lazy"
           decoding="async"
-          style={{ width: "100%", height: "100%", objectFit: "contain", display: "block" }}
+          style={{
+  width: "100%",
+  height: "100%",
+  objectFit: "contain",
+  display: "block",
+  userSelect: "none",
+}}
         />
-      </div>
+     {images.length > 1 && (
+  <button
+    onClick={() =>
+      setCurrent((current - 1 + images.length) % images.length)
+    }
+  >
+    ◀
+  </button>
+)}
+{images.length > 1 && (
+  <button
+  type="button"
+  style={{
+    position: "absolute",
+    right: 8,
+    top: "50%",
+    transform: "translateY(-50%)",
+    zIndex: 2,
+    cursor: "pointer",
+  }}
+  onClick={() =>
+    setCurrent((current + 1) % images.length)
+  }
+>
+    ▶
+</button>
+)}
+</div>
     );
   }
   return (
