@@ -19,6 +19,7 @@ export default function ImageSlot({
   radius = 12,
   placeholder = "",
   style,
+  gallery = false,
 }) {
   const borderRadius =
     shape === "circle" ? "50%" :
