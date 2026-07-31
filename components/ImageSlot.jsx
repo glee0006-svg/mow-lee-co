@@ -54,7 +54,7 @@ const [current, setCurrent] = useState(0);
   userSelect: "none",
 }}
         />
-     {images.length > 1 && (
+     {gallery && images.length > 1 && (
   <button
     type="button"
 style={{
@@ -72,7 +72,7 @@ style={{
     ◀
   </button>
 )}
-{images.length > 1 && (
+{gallery && images.length > 1 && (
   <button
   type="button"
   style={{
