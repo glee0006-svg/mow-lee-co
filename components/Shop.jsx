@@ -39,6 +39,12 @@ const PRODUCT_IMAGES = {
   d08: "/Duck Gizzard.jpg",
   d03: "/Salt Duck Leg.jpg",
 
+  s1: [
+  "/Pork Sausage 1.png",
+  "/Pork Sausage 2.png",
+  "/Pork Sausage 3.png",
+],
+  
   d04: [
     "/Soy Duck Leg 1.png",
     "/Soy Duck Leg 2.png",
