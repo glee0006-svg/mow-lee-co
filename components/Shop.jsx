@@ -33,6 +33,10 @@ d04: {
   en: "A beloved delicacy with a satisfyingly tender texture, infused with deep, savory flavors through traditional preparation.",
   zh: "傳統腊鴨腳鴨翼，經細心醃製及慢火風乾，鹹香濃郁，口感富有嚼勁。",
 },
+  s1: {
+  en: "A timeless Chinese favorite, expertly seasoned and naturally cured to achieve its signature sweet-savory flavor.",
+  zh: "傳統中式臘腸，精心調味，天然風乾，甜鹹均衡，風味經典。",
+},
 };
 
 const PRODUCT_IMAGES = {
