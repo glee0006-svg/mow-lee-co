@@ -43,6 +43,12 @@ const PRODUCT_IMAGES = {
   ],
 
   d05: "/whole-cured-duck.jpg",
+
+  d06: [
+  "/Duck Feet n Wing 1.png",
+  "/Duck Feet n Wing 2.png",
+  "/Duck Feet n Wing 3.png",
+],
 };
 
 export default function Shop() {
