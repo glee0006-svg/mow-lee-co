@@ -10,7 +10,9 @@ export default function FeaturedGrid({ navTo }) {
   CATEGORIES.forEach((c) => c.items.forEach((it) => (lookup[it.id] = it)));
   const items = FEATURED.map((id) => lookup[id]).filter(Boolean);
   const phrases = ["猪肉腸", "腊肉", "腊鴨", "鴨肝腸", "鴨肝", "蝦米"];
-
+const PRODUCT_IMAGES = {
+  s1: ["/Pork Sausage 1.png", "/Pork Sausage 2.png", "/Pork Sausage 3.png"],
+};
   return (
     <section style={{ paddingTop: 56 }}>
       <div className="wrap">
@@ -26,7 +28,11 @@ export default function FeaturedGrid({ navTo }) {
           {items.map((it, i) => (
             <div className="feat-card" key={it.id} onClick={() => navTo && navTo("products")}>
               <div className="image-ph" onClick={(e) => e.stopPropagation()}>
-                <ImageSlot id={`feat-${it.id}`} placeholder={`${it.en} photo`} />
+                <ImageSlot
+  id={`feat-${it.id}`}
+  src={PRODUCT_IMAGES[it.id]}
+  placeholder={`${it.en} photo`}
+/>
                 <span className="ph-zh" aria-hidden="true">{phrases[i] || it.zh}</span>
                 <span className="ph-en" aria-hidden="true">{it.en}</span>
               </div>
