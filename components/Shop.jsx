@@ -29,6 +29,10 @@ d04: {
   en: "Marinated in a savory soy-based blend and slow-cooked to deliver tender meat with deep, aromatic flavor.",
   zh: "醬油醃製，慢火烹調，肉質嫩滑，醬香濃郁。",
 },
+  d13: {
+  en: "A beloved delicacy with a satisfyingly tender texture, infused with deep, savory flavors through traditional preparation.",
+  zh: "傳統腊鴨腳鴨翼，經細心醃製及慢火風乾，鹹香濃郁，口感富有嚼勁。",
+},
 };
 
 const PRODUCT_IMAGES = {
