@@ -25,7 +25,12 @@ const PROD_DETAIL = {
          zh: "天然日曬全蝦。本號專選小巧鮮甜之品，緩緩烘乾。湯水清鮮與否，繫於此。" },
   g2:  { en: "Salt-cured fish — a Cantonese pantry essential. Steam with pork patty, fold into fried rice, or use sparingly to deepen any savoury braise.",
          zh: "鹹魚——粵廚必備。蒸豬肉餅、炒飯、或入紅燒鹵汁少許，皆能添香。" },
+d04: {
+  en: "Marinated in a savory soy-based blend and slow-cooked to deliver tender meat with deep, aromatic flavor.",
+  zh: "醬油醃製，慢火烹調，肉質嫩滑，醬香濃郁。",
+},
 };
+
 const PRODUCT_IMAGES = {
   d08: "/Duck Gizzard.jpg",
   d03: "/Salt Duck Leg.jpg",
