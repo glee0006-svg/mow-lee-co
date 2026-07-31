@@ -115,12 +115,13 @@ export default function Shop() {
                   onKeyDown={(e) => { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); setDetail(it); } }}
                 >
                   <div className="thumb" onClick={(e) => e.stopPropagation()}>
-<ImageSlot
-  id={`modal-${detail.id}`}
-  src={PRODUCT_IMAGES[detail.id]}
-  placeholder={detail.en}
-  gallery={true}
-/>                  </div>
+  <ImageSlot
+    id={`thumb-${it.id}`}
+    src={PRODUCT_IMAGES[it.id]}
+    placeholder={it.en}
+    gallery={false}
+  />
+</div>
                   <div className="name">
                     <span className="zh">{it.zh}</span>
                     <span className="en">{it.en}</span>
