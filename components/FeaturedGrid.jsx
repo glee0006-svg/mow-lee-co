@@ -4,7 +4,8 @@ import { CATEGORIES, FEATURED } from "@/lib/i18n";
 import { useApp } from "@/lib/store";
 import ImageSlot from "./ImageSlot";
 
-export default function FeaturedGrid({ navTo }) {
+
+export default function FeaturedGrid({ navTo, onProductClick }) {
   const { addToCart } = useApp();
   const lookup = {};
   CATEGORIES.forEach((c) => c.items.forEach((it) => (lookup[it.id] = it)));
@@ -26,7 +27,13 @@ const PRODUCT_IMAGES = {
         </div>
         <div className="feat-grid">
           {items.map((it, i) => (
-            <div className="feat-card" key={it.id} onClick={() => navTo && navTo("products")}>
+            <div className="feat-card" key={it.id} onClick={() => {
+  if (onProductClick) {
+    onProductClick(it);
+  } else if (navTo) {
+    navTo("products");
+  }
+}}
               <div className="image-ph" onClick={(e) => e.stopPropagation()}>
                 <ImageSlot
   id={`feat-${it.id}`}
