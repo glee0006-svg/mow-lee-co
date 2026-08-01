@@ -7,8 +7,6 @@ import Credentials from "./Credentials";
 import ImageSlot from "./ImageSlot";
 
 const PROD_DETAIL = {
-  s1:  { en: "Our house standard since the 1850s — pork shoulder hand-cut, marinated in head-grade soy and Shaoxing wine, tied in pairs and oven-dried for four days. Sweet, smoky, marbled. Steam over rice or slice into clay-pot dishes.",
-         zh: "本號招牌，自一八五零年代相傳。豬肩肉手工切粒，以頭抽、紹興酒醃製，雙條紥起，慢焙四日。甜香微煙，肥瘦相間。蒸飯、煲仔皆宜。" },
   s2:  { en: "All lean shoulder. No visible fat. The drier, firmer cousin to our standard link — preferred by customers who want sausage character without the richness.",
          zh: "全瘦豬肩肉，不見肥膏。較招牌腸更乾爽結實。喜其香而不膩者首選。" },
   s3:  { en: "A house specialty: pork sausage threaded with whole pieces of duck liver. Earthier, deeper, richer. The link our regulars come back for around the holidays.",
