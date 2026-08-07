@@ -27,13 +27,16 @@ const PRODUCT_IMAGES = {
         </div>
         <div className="feat-grid">
           {items.map((it, i) => (
-            <div className="feat-card" key={it.id} onClick={() => {
-  if (onProductClick) {
-    onProductClick(it);
-  } else if (navTo) {
-    navTo("products");
-  }
-}}
+            <div
+  className="feat-card"
+  key={it.id}
+  onClick={() => {
+    if (onProductClick) {
+      onProductClick(it);
+    } else if (navTo) {
+      navTo("products");
+    }
+  }}>
               <div className="image-ph" onClick={(e) => e.stopPropagation()}>
                 <ImageSlot
   id={`feat-${it.id}`}
