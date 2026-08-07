@@ -61,6 +61,13 @@ const PRODUCT_IMAGES = {
   "/Duck Feet n Wing 2.png",
   "/Duck Feet n Wing 3.png",
 ],
+
+  g1: [
+  "/Dried Shrimp 1.png",
+  "/Dried Shrimp 2.png",
+  "/Dried Shrimp 3.png",
+],
+  
 };
 
 export default function Shop() {
