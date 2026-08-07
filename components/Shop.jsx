@@ -69,6 +69,12 @@ const PRODUCT_IMAGES = {
   "/Dried Shrimp 2.png",
   "/Dried Shrimp 3.png",
 ],
+
+  d14: [
+  "/Duck Neck 1.png",
+  "/Duck Neck 2.png",
+  "/Duck Neck 3.png",
+],
   
 };
 
