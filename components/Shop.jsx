@@ -89,8 +89,8 @@ const PRODUCT_IMAGES = {
 
   d12: [
   "/Duck Tail 1.png",
-  "/Duck Tail 2.png",
-  "/Duck Tail 3.png",
+  "/Duck Tail A.png",
+  "/Duck Tail B.png",
 ],
   
 };
