@@ -19,8 +19,10 @@ const PROD_DETAIL = {
          zh: "整鴨拍扁，鹽醃慢焙五至七日。冬令大宴之主菜。整蒸或配芋頭、煲仔飯皆宜。" },
   d09: { en: "Whole cured duck liver — buttery, dense, deeply savory. Slice over warm rice or steam with sausage in the classic Cantonese way.",
          zh: "整顆腊鴨肝，質地綿密，鹹香濃郁。切片鋪於熱飯，或與腊腸同蒸，最得傳統粵法。" },
-  g1:  { en: "Sun-dried whole shrimp. We source small, sweet specimens and dry them slowly — the difference between a soup that hums and one that sings.",
-         zh: "天然日曬全蝦。本號專選小巧鮮甜之品，緩緩烘乾。湯水清鮮與否，繫於此。" },
+  g1: {
+  en: "Naturally dried to preserve their sweet, briny flavor and intense umami depth for authentic Chinese cooking.",
+  zh: "天然日曬金蝦。本號專選小巧鮮甜之品，緩緩烘乾。湯水清鮮與否，繫於此。",
+},
   g2:  { en: "Salt-cured fish — a Cantonese pantry essential. Steam with pork patty, fold into fried rice, or use sparingly to deepen any savoury braise.",
          zh: "鹹魚——粵廚必備。蒸豬肉餅、炒飯、或入紅燒鹵汁少許，皆能添香。" },
 d04: {
