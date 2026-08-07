@@ -12,7 +12,17 @@ export default function FeaturedGrid({ navTo, onProductClick }) {
   const items = FEATURED.map((id) => lookup[id]).filter(Boolean);
   const phrases = ["猪肉腸", "腊肉", "腊鴨", "鴨肝腸", "鴨肝", "蝦米"];
 const PRODUCT_IMAGES = {
-  s1: ["/Pork Sausage 1.png", "/Pork Sausage 2.png", "/Pork Sausage 3.png"],
+  s1: [
+    "/Pork Sausage 1.png",
+    "/Pork Sausage 2.png",
+    "/Pork Sausage 3.png",
+  ],
+
+  g1: [
+    "/Dried Shrimp 1.png",
+    "/Dried Shrimp 2.png",
+    "/Dried Shrimp 3.png",
+  ],
 };
   return (
     <section style={{ paddingTop: 56 }}>
