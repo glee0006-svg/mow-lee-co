@@ -36,7 +36,8 @@ const PRODUCT_IMAGES = {
     } else if (navTo) {
       navTo("products");
     }
-  }}>
+  }}
+>
               <div className="image-ph" onClick={(e) => e.stopPropagation()}>
                 <ImageSlot
   id={`feat-${it.id}`}
