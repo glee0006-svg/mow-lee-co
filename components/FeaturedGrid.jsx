@@ -23,6 +23,12 @@ const PRODUCT_IMAGES = {
     "/Dried Shrimp 2.png",
     "/Dried Shrimp 3.png",
   ],
+
+  d15: [
+  "/Duck Liver Sausage 1.png",
+  "/Duck Liver Sausage 2.png",
+  "/Duck Liver Sausage 3.png",
+],
 };
   return (
     <section style={{ paddingTop: 56 }}>
