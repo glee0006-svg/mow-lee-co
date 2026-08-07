@@ -103,6 +103,12 @@ const PRODUCT_IMAGES = {
   "/Duck Tail A.png",
   "/Duck Tail B.png",
 ],
+
+  d15: [
+  "/Duck Liver Sausage 1.png",
+  "/Duck Liver Sausage 2.png",
+  "/Duck Liver Sausage 3.png",
+],
   
 };
 
