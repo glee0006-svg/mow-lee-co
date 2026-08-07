@@ -38,6 +38,11 @@ d04: {
   en: "Slow-cured to enhance its naturally rich flavor, offering a tender, savory bite enjoyed as a classic delicacy.",
   zh: "慢火風乾，提升天然濃郁風味，肉質嫩滑，鹹香可口，是經典美味。",
 },
+
+  d12: {
+  en: "A flavorful specialty known for its rich, succulent texture and deep, savory taste, prepared using traditional methods.",
+  zh: "風味濃郁，肉質鮮嫩多汁，依循傳統工藝製作，鹹香可口。",
+},
   
   s1: {
   en: "A timeless Chinese favorite, expertly seasoned and naturally cured to achieve its signature sweet-savory flavor.",
@@ -80,6 +85,12 @@ const PRODUCT_IMAGES = {
   "/Duck Neck 1.png",
   "/Duck Neck 2.png",
   "/Duck Neck 3.png",
+],
+
+  d12: [
+  "/Duck Tail 1.png",
+  "/Duck Tail 2.png",
+  "/Duck Tail 3.png",
 ],
   
 };
