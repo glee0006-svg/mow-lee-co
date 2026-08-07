@@ -53,6 +53,7 @@ const PRODUCT_IMAGES = {
   id={`feat-${it.id}`}
   src={PRODUCT_IMAGES[it.id]}
   placeholder={`${it.en} photo`}
+                  gallery
 />
                 <span className="ph-zh" aria-hidden="true">{phrases[i] || it.zh}</span>
                 <span className="ph-en" aria-hidden="true">{it.en}</span>
