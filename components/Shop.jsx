@@ -98,8 +98,7 @@ const PRODUCT_IMAGES = {
   "/Duck Tail B.png",
 ],
 
-  - d15: [
-+ s3: [
+  s3: [
   "/Duck Liver Sausage 1.png",
   "/Duck Liver Sausage 2.png",
   "/Duck Liver Sausage 3.png",
