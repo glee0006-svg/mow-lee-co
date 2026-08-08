@@ -43,12 +43,6 @@ d04: {
   en: "A flavorful specialty known for its rich, succulent texture and deep, savory taste, prepared using traditional methods.",
   zh: "風味濃郁，肉質鮮嫩多汁，依循傳統工藝製作，鹹香可口。",
 },
-
-  d15: [
-  "/Duck Liver Sausage 1.png",
-  "/Duck Liver Sausage 2.png",
-  "/Duck Liver Sausage 3.png",
-],
   
   s1: {
   en: "A timeless Chinese favorite, expertly seasoned and naturally cured to achieve its signature sweet-savory flavor.",
