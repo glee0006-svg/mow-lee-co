@@ -41,6 +41,11 @@ d04: {
   en: "A flavorful specialty known for its rich, succulent texture and deep, savory taste, prepared using traditional methods.",
   zh: "風味濃郁，肉質鮮嫩多汁，依循傳統工藝製作，鹹香可口。",
 },
+
+  d07: {
+  en: "Lean yet remarkably succulent, offering a refined balance of tenderness and bold, savory flavor.",
+  zh: "肉質精瘦而鮮嫩，鹹香濃郁，口感細緻，風味均衡。",
+},
   
   s1: {
   en: "A timeless Chinese favorite, expertly seasoned and naturally cured to achieve its signature sweet-savory flavor.",
@@ -72,6 +77,12 @@ const PRODUCT_IMAGES = {
 
   d05: "/whole-cured-duck.jpg",
 
+  d07: [
+  "/Duck Breast 1.png",
+  "/Duck Breast 2.png",
+  "/Duck Breast 3.png",
+],
+  
   d13: [
   "/Duck Feet n Wing 1.png",
   "/Duck Feet n Wing 2.png",
