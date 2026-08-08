@@ -55,7 +55,7 @@ d04: {
   zh: "傳統中式臘腸，精心調味，天然風乾，甜鹹均衡，風味經典。",
 },
 
-  d15: {
+  s3: {
   en: "Smooth, savory, and delicately seasoned, offering a distinctive taste that reflects generations of craftsmanship.",
   zh: "口感細膩，鹹香濃郁，傳承世代工藝，展現經典風味。",
 },
