@@ -26,6 +26,12 @@ const PROD_DETAIL = {
   
   d05: { en: "Whole duck, pressed flat, salt-cured and oven-dried over five to seven days. A centerpiece for winter banquets — steam whole, or pair with taro and clay-pot rice.",
          zh: "整鴨拍扁，鹽醃慢焙五至七日。冬令大宴之主菜。整蒸或配芋頭、煲仔飯皆宜。" },
+
+  d06: {
+  en: "A traditional specialty with a crisp, satisfying texture and rich, savory flavor, crafted using time-honored recipes.",
+  zh: "傳統特色美味，口感酥脆滿足，鹹香濃郁，承襲經典配方製作。",
+},
+  
   d09: { en: "Whole cured duck liver — buttery, dense, deeply savory. Slice over warm rice or steam with sausage in the classic Cantonese way.",
          zh: "整顆腊鴨肝，質地綿密，鹹香濃郁。切片鋪於熱飯，或與腊腸同蒸，最得傳統粵法。" },
   g1: {
@@ -99,6 +105,12 @@ const PRODUCT_IMAGES = {
   ],
 
   d05: "/whole-cured-duck.jpg",
+
+  d06: [
+  "/Duck Cookie 1.png",
+  "/Duck Cookie 2.png",
+  "/Duck Cookie 3.png",
+],
 
   d07: [
   "/Duck Breast A.png",
