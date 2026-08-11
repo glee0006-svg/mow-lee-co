@@ -13,10 +13,17 @@ const PROD_DETAIL = {
          zh: "五花腩切大件，醃四十八小時，懸於竹竿，慢焙六日。蒸後切薄片，鋪於飯面，或入煲仔飯同炊。" },
   p2:  { en: "Lean cured pork — same cure, no fat. Firmer texture, cleaner finish. Good for soups and stir-fries where richness isn't wanted.",
          zh: "全瘦腊肉，配方相同，盡去肥膏。質感結實，味淨清香。煲湯、小炒尤佳。" },
+  
   d01: {
   en: "Tender and juicy with classic seasoning that brings out its naturally satisfying flavor.",
   zh: "肉質嫩滑多汁，經典調味帶出天然鮮美風味。",
 },
+
+  d02: {
+  en: "Traditionally tied and expertly cured to lock in its rich flavor, tender texture, and authentic heritage taste.",
+  zh: "傳統綁製，精心醃製，鎖住濃郁風味與嫩滑口感，展現正宗傳統風味。",
+},
+  
   d05: { en: "Whole duck, pressed flat, salt-cured and oven-dried over five to seven days. A centerpiece for winter banquets — steam whole, or pair with taro and clay-pot rice.",
          zh: "整鴨拍扁，鹽醃慢焙五至七日。冬令大宴之主菜。整蒸或配芋頭、煲仔飯皆宜。" },
   d09: { en: "Whole cured duck liver — buttery, dense, deeply savory. Slice over warm rice or steam with sausage in the classic Cantonese way.",
@@ -76,6 +83,12 @@ const PRODUCT_IMAGES = {
   "/Chicken Leg 1.png",
   "/Chicken Leg 2.png",
   "/Chicken Leg 3.png",
+],
+
+  d02: [
+  "/Duck Leg (String) 1.png",
+  "/Duck Leg (String) 2.png",
+  "/Duck Leg (String) 3.png",
 ],
   
   d04: [
