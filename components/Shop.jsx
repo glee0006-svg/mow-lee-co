@@ -101,9 +101,9 @@ const PRODUCT_IMAGES = {
   d05: "/whole-cured-duck.jpg",
 
   d07: [
-  "/Duck Breast 1.png",
-  "/Duck Breast 2.png",
-  "/Duck Breast 3.png",
+  "/Duck Breast A.png",
+  "/Duck Breast B.png",
+  "/Duck Breast C.png",
 ],
   
   d13: [
