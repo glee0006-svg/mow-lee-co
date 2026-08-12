@@ -23,13 +23,23 @@ const PROD_DETAIL = {
   en: "Traditionally tied and expertly cured to lock in its rich flavor, tender texture, and authentic heritage taste.",
   zh: "傳統綁製，精心醃製，鎖住濃郁風味與嫩滑口感，展現正宗傳統風味。",
 },
-  
+
+  d04: {
+  en: "Marinated in a savory soy-based blend and slow-cooked to deliver tender meat with deep, aromatic flavor.",
+  zh: "醬油醃製，慢火烹調，肉質嫩滑，醬香濃郁。",
+},
+
   d05: { en: "Whole duck, pressed flat, salt-cured and oven-dried over five to seven days. A centerpiece for winter banquets — steam whole, or pair with taro and clay-pot rice.",
          zh: "整鴨拍扁，鹽醃慢焙五至七日。冬令大宴之主菜。整蒸或配芋頭、煲仔飯皆宜。" },
 
   d06: {
   en: "A traditional specialty with a crisp, satisfying texture and rich, savory flavor, crafted using time-honored recipes.",
   zh: "傳統特色美味，口感酥脆滿足，鹹香濃郁，承襲經典配方製作。",
+},
+
+  d07: {
+  en: "Lean yet remarkably succulent, offering a refined balance of tenderness and bold, savory flavor.",
+  zh: "肉質精瘦而鮮嫩，鹹香濃郁，口感細緻，風味均衡。",
 },
   
   d09: { en: "Whole cured duck liver — buttery, dense, deeply savory. Slice over warm rice or steam with sausage in the classic Cantonese way.",
@@ -40,10 +50,7 @@ const PROD_DETAIL = {
 },
   g2:  { en: "Salt-cured fish — a Cantonese pantry essential. Steam with pork patty, fold into fried rice, or use sparingly to deepen any savoury braise.",
          zh: "鹹魚——粵廚必備。蒸豬肉餅、炒飯、或入紅燒鹵汁少許，皆能添香。" },
-d04: {
-  en: "Marinated in a savory soy-based blend and slow-cooked to deliver tender meat with deep, aromatic flavor.",
-  zh: "醬油醃製，慢火烹調，肉質嫩滑，醬香濃郁。",
-},
+
   d13: {
   en: "A beloved delicacy with a satisfyingly tender texture, infused with deep, savory flavors through traditional preparation.",
   zh: "傳統腊鴨腳鴨翼，經細心醃製及慢火風乾，鹹香濃郁，口感富有嚼勁。",
@@ -59,9 +66,9 @@ d04: {
   zh: "風味濃郁，肉質鮮嫩多汁，依循傳統工藝製作，鹹香可口。",
 },
 
-  d07: {
-  en: "Lean yet remarkably succulent, offering a refined balance of tenderness and bold, savory flavor.",
-  zh: "肉質精瘦而鮮嫩，鹹香濃郁，口感細緻，風味均衡。",
+  d14: {
+  en: "Delicately prepared whole quail featuring tender meat, rich flavor, and timeless appeal for any traditional feast.",
+  zh: "精心製作的整隻鵪鶉，肉質鮮嫩，風味濃郁，為各式傳統盛宴增添經典魅力。",
 },
   
   s1: {
@@ -140,6 +147,12 @@ const PRODUCT_IMAGES = {
   "/Duck Tail 1.png",
   "/Duck Tail A.png",
   "/Duck Tail B.png",
+],
+
+  d14: [
+  "/Quail 1.png",
+  "/Quail 2.png",
+  "/Quail 3.png",
 ],
 
   s3: [
