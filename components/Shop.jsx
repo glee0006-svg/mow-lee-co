@@ -80,6 +80,12 @@ const PROD_DETAIL = {
   en: "Smooth, savory, and delicately seasoned, offering a distinctive taste that reflects generations of craftsmanship.",
   zh: "口感細膩，鹹香濃郁，傳承世代工藝，展現經典風味。",
 },
+
+  p2: {
+  en: "Expertly cured to develop a bold, savory taste while maintaining a tender, meaty bite.",
+  zh: "精心醃製，呈現濃郁鹹香風味，同時保持嫩滑紮實的肉質口感。",
+},
+  
 };
 
 const PRODUCT_IMAGES = {
@@ -159,6 +165,12 @@ const PRODUCT_IMAGES = {
   "/Duck Liver Sausage 1.png",
   "/Duck Liver Sausage 2.png",
   "/Duck Liver Sausage 3.png",
+],
+
+  p2: [
+  "/Lean Cured Pork 1.png",
+  "/Lean Cured Pork 2.png",
+  "/Lean Cured Pork 3.png",
 ],
   
 };
