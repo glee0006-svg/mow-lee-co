@@ -28,6 +28,11 @@ const PROD_DETAIL = {
   zh: "傳統綁製，精心醃製，鎖住濃郁風味與嫩滑口感，展現正宗傳統風味。",
 },
 
+  d03: {
+  en: "Slow-cured with traditional spices for a savory, aromatic taste and exceptionally tender meat.",
+  zh: "以傳統香料慢火醃製，鹹香馥郁，肉質格外嫩滑。",
+},
+
   d04: {
   en: "Marinated in a savory soy-based blend and slow-cooked to deliver tender meat with deep, aromatic flavor.",
   zh: "醬油醃製，慢火烹調，肉質嫩滑，醬香濃郁。",
@@ -94,7 +99,12 @@ const PROD_DETAIL = {
 
 const PRODUCT_IMAGES = {
   d08: "/Duck Gizzard.jpg",
-  d03: "/Salt Duck Leg.jpg",
+  
+  d03: [
+  "/Salt Duck Leg 1.png",
+  "/Salt Duck Leg 2.png",
+  "/Salt Duck Leg 3.png",
+],
 
   s1: [
   "/Pork Sausage 1.png",
