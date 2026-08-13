@@ -9,8 +9,12 @@ import ImageSlot from "./ImageSlot";
 const PROD_DETAIL = {
   s2:  { en: "All lean shoulder. No visible fat. The drier, firmer cousin to our standard link — preferred by customers who want sausage character without the richness.",
          zh: "全瘦豬肩肉，不見肥膏。較招牌腸更乾爽結實。喜其香而不膩者首選。" },
-  p1:  { en: "Whole pork belly cut into broad slabs, marinated for 48 hours, hung on bamboo and oven-dried six days. Steam, then slice paper-thin to fan over rice or stir into clay-pot rice.",
-         zh: "五花腩切大件，醃四十八小時，懸於竹竿，慢焙六日。蒸後切薄片，鋪於飯面，或入煲仔飯同炊。" },
+  
+  p1: {
+  en: "Perfectly balanced with layers of lean meat and delicate fat, delivering exceptional tenderness and flavor.",
+  zh: "肥瘦均衡，層次細緻，呈現極佳嫩度與濃郁風味。",
+},
+  
   p2:  { en: "Lean cured pork — same cure, no fat. Firmer texture, cleaner finish. Good for soups and stir-fries where richness isn't wanted.",
          zh: "全瘦腊肉，配方相同，盡去肥膏。質感結實，味淨清香。煲湯、小炒尤佳。" },
   
@@ -165,6 +169,12 @@ const PRODUCT_IMAGES = {
   "/Duck Liver Sausage 1.png",
   "/Duck Liver Sausage 2.png",
   "/Duck Liver Sausage 3.png",
+],
+
+  p1: [
+  "/Pork Belly 1.png",
+  "/Pork Belly 2.png",
+  "/Pork Belly 3.png",
 ],
 
   p2: [
