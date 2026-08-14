@@ -211,6 +211,7 @@ export default function Shop() {
   const { addToCart, setQty, cart, addedFlash } = useApp();
   const [active, setActive] = useState("all");
   const [detail, setDetail] = useState(null);
+  const [modalPosition, setModalPosition] = useState(null);
   const cats = active === "all" ? CATEGORIES : CATEGORIES.filter((c) => c.id === active);
   const qtyOf = (id) => {
     const l = cart.find((l) => l.id === id);
@@ -278,8 +279,23 @@ export default function Shop() {
                   key={it.id}
                   role="button"
                   tabIndex={0}
-                  onClick={() => setDetail(it)}
-                  onKeyDown={(e) => { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); setDetail(it); } }}
+                  onClick={(e) => {
+  const rect = e.currentTarget.getBoundingClientRect();
+  setModalPosition({
+    top: rect.top + rect.height / 2,
+  });
+  setDetail(it);
+}}
+onKeyDown={(e) => {
+  if (e.key === "Enter" || e.key === " ") {
+    e.preventDefault();
+    const rect = e.currentTarget.getBoundingClientRect();
+    setModalPosition({
+      top: rect.top + rect.height / 2,
+    });
+    setDetail(it);
+  }
+}}
                 >
                   <div className="thumb" onClick={(e) => e.stopPropagation()}>
   <ImageSlot
@@ -331,9 +347,43 @@ export default function Shop() {
       </div>
 
       {detail && (
-        <div className="prod-modal-bg" onClick={() => setDetail(null)}>
-          <div className="prod-modal" role="dialog" aria-modal="true" onClick={(e) => e.stopPropagation()}>
-            <button className="prod-modal-x" onClick={() => setDetail(null)} aria-label="Close">✕</button>
+        <div
+  className="prod-modal-bg"
+  onClick={() => {
+    setDetail(null);
+    setModalPosition(null);
+  }}
+>
+          <div className="prod-modal" role="dialog" ...
+          <div
+  className="prod-modal"
+  role="dialog"
+  aria-modal="true"
+  onClick={(e) => e.stopPropagation()}
+  style={
+    style={
+  modalPosition
+    ? {
+        position: "fixed",
+        top: `${Math.max(
+          24,
+          Math.min(window.innerHeight - 24, modalPosition.top)
+        )}px`,
+        left: "50%",
+        transform: "translate(-50%, -50%)",
+      }
+    : undefined
+}
+            <button
+  className="prod-modal-x"
+  onClick={() => {
+    setDetail(null);
+    setModalPosition(null);
+  }}
+  aria-label="Close"
+>
+  ×
+</button>
             <div className="prod-modal-img">
               <ImageSlot
   id={`modal-${detail.id}`}
