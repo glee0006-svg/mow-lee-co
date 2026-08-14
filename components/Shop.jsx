@@ -380,13 +380,7 @@ onKeyDown={(e) => {
   modalPosition
     ? {
         position: "fixed",
-        top: `${Math.max(
-          24,
-          Math.min(
-            window.innerHeight - 24 - 420,
-            modalPosition.top - 420
-          )
-        )}px`,
+        top: `${modalPosition.top}px`,
         left: "50%",
         transform: "translateX(-50%)",
       }
