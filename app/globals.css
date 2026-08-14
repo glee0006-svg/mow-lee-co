@@ -950,7 +950,7 @@ body.zh .cat-tab { font-family: var(--hanzi); letter-spacing: 0.1em; font-size: 
   overflow: hidden;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  position: relative;
+  position: fixed;
   animation: pm-pop 240ms cubic-bezier(.2,.7,.2,1);
 }
 
