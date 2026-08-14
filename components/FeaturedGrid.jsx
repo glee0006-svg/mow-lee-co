@@ -19,10 +19,10 @@ const PRODUCT_IMAGES = {
   ],
 
   p1: [
-    "/Lap Yuk 1.png",
-    "/Lap Yuk 2.png",
-    "/Lap Yuk 3.png",
-  ],
+  "/Pork Belly 1.png",
+  "/Pork Belly 2.png",
+  "/Pork Belly 3.png",
+],
 
   d05: [
     "/whole-cured-duck.jpg",
