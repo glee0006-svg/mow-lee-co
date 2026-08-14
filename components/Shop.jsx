@@ -6,10 +6,7 @@ import { useApp } from "@/lib/store";
 import Credentials from "./Credentials";
 import ImageSlot from "./ImageSlot";
 
-const PROD_DETAIL = {
-  s2:  { en: "All lean shoulder. No visible fat. The drier, firmer cousin to our standard link — preferred by customers who want sausage character without the richness.",
-         zh: "全瘦豬肩肉，不見肥膏。較招牌腸更乾爽結實。喜其香而不膩者首選。" },
-  
+const PROD_DETAIL = {  
   p1: {
   en: "Perfectly balanced with layers of lean meat and delicate fat, delivering exceptional tenderness and flavor.",
   zh: "肥瘦均衡，層次細緻，呈現極佳嫩度與濃郁風味。",
