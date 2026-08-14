@@ -47,6 +47,11 @@ const PROD_DETAIL = {
   en: "Lean yet remarkably succulent, offering a refined balance of tenderness and bold, savory flavor.",
   zh: "肉質精瘦而鮮嫩，鹹香濃郁，口感細緻，風味均衡。",
 },
+
+  d08: {
+  en: "Prized for its firm, satisfying texture, duck gizzard delivers a bold, savory flavor that shines in traditional Chinese cuisine.",
+  zh: "鴨胗以紮實爽口的口感著稱，鹹香濃郁，展現傳統中式美食的獨特風味。",
+},
   
   d09: { en: "Whole cured duck liver — buttery, dense, deeply savory. Slice over warm rice or steam with sausage in the classic Cantonese way.",
          zh: "整顆腊鴨肝，質地綿密，鹹香濃郁。切片鋪於熱飯，或與腊腸同蒸，最得傳統粵法。" },
@@ -95,7 +100,11 @@ const PROD_DETAIL = {
 };
 
 const PRODUCT_IMAGES = {
-  d08: "/Duck Gizzard.jpg",
+  d08: [
+  "/Duck Gizzard.jpg",
+  "/Duck Gizzard 2.png",
+  "/Duck Gizzard 3.png",
+],
   
   d03: [
   "/Salt Duck Leg.jpg",
