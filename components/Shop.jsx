@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { I18N, CATEGORIES } from "@/lib/i18n";
 import { useApp } from "@/lib/store";
 import Credentials from "./Credentials";
@@ -212,6 +212,7 @@ export default function Shop() {
   const [active, setActive] = useState("all");
   const [detail, setDetail] = useState(null);
   const [modalPosition, setModalPosition] = useState(null);
+  const modalRef = useRef(null);
   const cats = active === "all" ? CATEGORIES : CATEGORIES.filter((c) => c.id === active);
   const qtyOf = (id) => {
     const l = cart.find((l) => l.id === id);
@@ -224,7 +225,21 @@ export default function Shop() {
     window.addEventListener("keydown", onKey);
     return () => window.removeEventListener("keydown", onKey);
   }, [detail]);
+  useLayoutEffect(() => {
+    if (!detail || !modalRef.current || !modalPosition) return;
 
+    const modal = modalRef.current;
+    const modalHeight = modal.offsetHeight;
+
+    const desiredTop = modalPosition.top - modalHeight / 2;
+
+    const maxTop = window.innerHeight - modalHeight - 24;
+    const finalTop = Math.max(24, Math.min(desiredTop, maxTop));
+
+    setModalPosition((prev) =>
+      prev ? { ...prev, top: finalTop } : prev
+    );
+  }, [detail]);
   const detailText = detail && (PROD_DETAIL[detail.id] || detail.note || {
     en: "A traditional Mow Lee specialty, prepared by hand at 774 Commercial Street.",
     zh: "茂利號傳統製作，於 Commercial 街七七四號手工炮製。",
@@ -357,6 +372,7 @@ onKeyDown={(e) => {
           <div className="prod-modal" role="dialog" ...
           <div
   className="prod-modal"
+  ref={modalRef}
   role="dialog"
   aria-modal="true"
   onClick={(e) => e.stopPropagation()}
