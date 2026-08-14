@@ -18,6 +18,18 @@ const PRODUCT_IMAGES = {
     "/Pork Sausage 3.png",
   ],
 
+  p1: [
+    "/Lap Yuk 1.png",
+    "/Lap Yuk 2.png",
+    "/Lap Yuk 3.png",
+  ],
+
+  d05: [
+    "/whole-cured-duck.jpg",
+    "/Whole Cured Duck 2.png",
+    "/Whole Cured Duck 3.png",
+  ],
+
   g1: [
     "/Dried Shrimp 1.png",
     "/Dried Shrimp 2.png",
@@ -25,10 +37,10 @@ const PRODUCT_IMAGES = {
   ],
 
   s3: [
-  "/Duck Liver Sausage 1.png",
-  "/Duck Liver Sausage 2.png",
-  "/Duck Liver Sausage 3.png",
-],
+    "/Duck Liver Sausage 1.png",
+    "/Duck Liver Sausage 2.png",
+    "/Duck Liver Sausage 3.png",
+  ],
 };
   return (
     <section style={{ paddingTop: 56 }}>
