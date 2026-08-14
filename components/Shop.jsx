@@ -101,7 +101,7 @@ const PRODUCT_IMAGES = {
   d08: "/Duck Gizzard.jpg",
   
   d03: [
-  "/Salt Duck Leg.png",
+  "/Salt Duck Leg.jpg",
   "/Salt Duck Leg 2.png",
   "/Salt Duck Leg 3.png",
 ],
