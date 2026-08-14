@@ -226,20 +226,17 @@ export default function Shop() {
     return () => window.removeEventListener("keydown", onKey);
   }, [detail]);
   useLayoutEffect(() => {
-    if (!detail || !modalRef.current || !modalPosition) return;
+  if (!detail || !modalRef.current || !modalPosition) return;
 
-    const modal = modalRef.current;
-    const modalHeight = modal.offsetHeight;
+  const modal = modalRef.current;
+  const modalHeight = modal.offsetHeight;
 
-    const desiredTop = modalPosition.top - modalHeight / 2;
+  const desiredTop = modalPosition.top - modalHeight / 2;
+  const maxTop = window.innerHeight - modalHeight - 24;
+  const finalTop = Math.max(24, Math.min(desiredTop, maxTop));
 
-    const maxTop = window.innerHeight - modalHeight - 24;
-    const finalTop = Math.max(24, Math.min(desiredTop, maxTop));
-
-    setModalPosition((prev) =>
-      prev ? { ...prev, top: finalTop } : prev
-    );
-  }, [detail]);
+  modal.style.top = `${finalTop}px`;
+}, [detail, modalPosition]);
   const detailText = detail && (PROD_DETAIL[detail.id] || detail.note || {
     en: "A traditional Mow Lee specialty, prepared by hand at 774 Commercial Street.",
     zh: "茂利號傳統製作，於 Commercial 街七七四號手工炮製。",
