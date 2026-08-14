@@ -35,8 +35,10 @@ const PROD_DETAIL = {
   zh: "醬油醃製，慢火烹調，肉質嫩滑，醬香濃郁。",
 },
 
-  d05: { en: "Whole duck, pressed flat, salt-cured and oven-dried over five to seven days. A centerpiece for winter banquets — steam whole, or pair with taro and clay-pot rice.",
-         zh: "整鴨拍扁，鹽醃慢焙五至七日。冬令大宴之主菜。整蒸或配芋頭、煲仔飯皆宜。" },
+  d05: {
+  en: "Prepared using traditional curing methods to create deep, savory flavor and succulent, aromatic meat.",
+  zh: "採用傳統醃製工藝，造就濃郁鹹香風味，以及鮮嫩多汁、香氣馥郁的肉質。",
+},
 
   d06: {
   en: "A traditional specialty with a crisp, satisfying texture and rich, savory flavor, crafted using time-honored recipes.",
@@ -137,7 +139,11 @@ const PRODUCT_IMAGES = {
     "/Soy Duck Leg 4.png",
   ],
 
-  d05: "/whole-cured-duck.jpg",
+  d05: [
+  "/whole-cured-duck.jpg",
+  "/Whole Cured Duck 2.png",
+  "/Whole Cured Duck 3.png",
+],
 
   d06: [
   "/Duck Cookie 1.png",
