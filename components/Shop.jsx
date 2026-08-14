@@ -361,16 +361,18 @@ onKeyDown={(e) => {
   aria-modal="true"
   onClick={(e) => e.stopPropagation()}
   style={
-    style={
   modalPosition
     ? {
         position: "fixed",
         top: `${Math.max(
           24,
-          Math.min(window.innerHeight - 24, modalPosition.top)
+          Math.min(
+            window.innerHeight - 24 - 420,
+            modalPosition.top - 420
+          )
         )}px`,
         left: "50%",
-        transform: "translate(-50%, -50%)",
+        transform: "translateX(-50%)",
       }
     : undefined
 }
