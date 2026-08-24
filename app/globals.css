@@ -917,6 +917,16 @@ body.zh .cat-tab { font-family: var(--hanzi); letter-spacing: 0.1em; font-size: 
   min-width: 0;
 }
 .prod-row:focus-visible { outline: 2px solid var(--ink); outline-offset: -2px; }
+.prod-row::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 0;
+  background: var(--ink);
+  transition: width 200ms ease;
+}
 
 /* Product detail modal */
 .prod-modal-bg {
@@ -944,7 +954,7 @@ body.zh .cat-tab { font-family: var(--hanzi); letter-spacing: 0.1em; font-size: 
   overflow: hidden;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  position: absolute;
+ position: fixed;
   animation: pm-pop 240ms cubic-bezier(.2,.7,.2,1);
 }
 
@@ -1119,13 +1129,7 @@ body.zh .prod-modal-desc {
     font-size: 22px;
   }
 }
-  content: "";
-  position: absolute;
-  left: 0; top: 0; bottom: 0;
-  width: 0;
-  background: var(--ink);
-  transition: width 200ms ease;
-}
+  
 .prod-row:nth-child(2n) { border-right: 0; }
 .prod-row:last-child, .prod-row:nth-last-child(2):nth-child(odd) { border-bottom: 0; }
 .prod-row:hover { background: rgba(255,255,255,0.34); padding-left: 32px; }
