@@ -418,7 +418,15 @@ onTouchStart={(e) => e.stopPropagation()}
                     <span className="lang-zh">{detail.unit === "lb" ? "每磅" : "每隻"}</span>
                   </div>
                 </div>
-                <button className="btn solid" onClick={() => addToCart(detail)}>
+               <button
+  type="button"
+  className="btn solid"
+  onClick={(e) => {
+    e.preventDefault();
+    e.stopPropagation();
+    addToCart(detail);
+  }}
+>
                   <span className="lang-en">+ {I18N.shop.add.en}{qtyOf(detail.id) > 0 ? ` (${qtyOf(detail.id)})` : ""}</span>
                   <span className="lang-zh">+ {I18N.shop.add.zh}{qtyOf(detail.id) > 0 ? `（${qtyOf(detail.id)}）` : ""}</span>
                   <span className="arrow">→</span>
