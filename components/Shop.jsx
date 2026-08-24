@@ -363,9 +363,11 @@ onKeyDown={(e) => {
       {detail && (
         <div
   className="prod-modal-bg"
-  onClick={() => {
-    setDetail(null);
-    setModalPosition(null);
+  onClick={(e) => {
+    if (e.target === e.currentTarget) {
+      setDetail(null);
+      setModalPosition(null);
+    }
   }}
 >
           <div
