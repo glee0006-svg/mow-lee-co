@@ -65,9 +65,11 @@ style={{
   zIndex: 2,
   cursor: "pointer",
 }}
-    onClick={() =>
-      setCurrent((current - 1 + images.length) % images.length)
-    }
+    onClick={(e) => {
+  e.preventDefault();
+  e.stopPropagation();
+  setCurrent((current - 1 + images.length) % images.length);
+}}
   >
     ◀
   </button>
@@ -83,9 +85,11 @@ style={{
     zIndex: 2,
     cursor: "pointer",
   }}
-  onClick={() =>
-    setCurrent((current + 1) % images.length)
-  }
+  onClick={(e) => {
+  e.preventDefault();
+  e.stopPropagation();
+  setCurrent((current + 1) % images.length);
+}}
 >
     ▶
 </button>
