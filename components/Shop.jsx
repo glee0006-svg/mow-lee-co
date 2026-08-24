@@ -225,18 +225,7 @@ export default function Shop() {
     window.addEventListener("keydown", onKey);
     return () => window.removeEventListener("keydown", onKey);
   }, [detail]);
-  useLayoutEffect(() => {
-  if (!detail || !modalRef.current || !modalPosition) return;
-
-  const modal = modalRef.current;
-  const modalHeight = modal.offsetHeight;
-
-  const desiredTop = modalPosition.top - modalHeight / 2;
-  const maxTop = window.innerHeight - modalHeight - 24;
-  const finalTop = Math.max(24, Math.min(desiredTop, maxTop));
-
-  modal.style.top = `${finalTop}px`;
-}, [detail, modalPosition]);
+  
   const detailText = detail && (PROD_DETAIL[detail.id] || detail.note || {
     en: "A traditional Mow Lee specialty, prepared by hand at 774 Commercial Street.",
     zh: "茂利號傳統製作，於 Commercial 街七七四號手工炮製。",
@@ -291,20 +280,12 @@ export default function Shop() {
                   key={it.id}
                   role="button"
                   tabIndex={0}
-                  onClick={(e) => {
-  const rect = e.currentTarget.getBoundingClientRect();
-  setModalPosition({
-    top: rect.top + rect.height / 2,
-  });
+                  onClick={() => {
   setDetail(it);
 }}
 onKeyDown={(e) => {
   if (e.key === "Enter" || e.key === " ") {
     e.preventDefault();
-    const rect = e.currentTarget.getBoundingClientRect();
-    setModalPosition({
-      top: rect.top + rect.height / 2,
-    });
     setDetail(it);
   }
 }}
@@ -373,16 +354,7 @@ onKeyDown={(e) => {
   role="dialog"
   aria-modal="true"
   onClick={(e) => e.stopPropagation()}
-  style={
-  modalPosition
-    ? {
-        position: "fixed",
-        top: `${modalPosition.top}px`,
-        left: "50%",
-        transform: "translateX(-50%)",
-      }
-    : undefined
-}
+  
             <button
   className="prod-modal-x"
   onClick={() => {
