@@ -368,7 +368,6 @@ onKeyDown={(e) => {
     setModalPosition(null);
   }}
 >
-          <div className="prod-modal" role="dialog" ...
           <div
   className="prod-modal"
   ref={modalRef}
