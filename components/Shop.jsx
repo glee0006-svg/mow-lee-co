@@ -280,12 +280,20 @@ export default function Shop() {
                   key={it.id}
                   role="button"
                   tabIndex={0}
-                  onClick={() => {
+                  onClick={(e) => {
+  const rect = e.currentTarget.getBoundingClientRect();
+  setModalPosition({
+    top: rect.top + rect.height / 2,
+  });
   setDetail(it);
 }}
 onKeyDown={(e) => {
   if (e.key === "Enter" || e.key === " ") {
     e.preventDefault();
+    const rect = e.currentTarget.getBoundingClientRect();
+    setModalPosition({
+      top: rect.top + rect.height / 2,
+    });
     setDetail(it);
   }
 }}
