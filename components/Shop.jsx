@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useLayoutEffect, useRef, useState } from "react";
 import { I18N, CATEGORIES } from "@/lib/i18n";
 import { useApp } from "@/lib/store";
 import Credentials from "./Credentials";
@@ -225,6 +225,19 @@ export default function Shop() {
     window.addEventListener("keydown", onKey);
     return () => window.removeEventListener("keydown", onKey);
   }, [detail]);
+
+  useLayoutEffect(() => {
+  if (!detail || !modalRef.current || !modalPosition) return;
+
+  const modal = modalRef.current;
+  const modalHeight = modal.offsetHeight;
+
+  const desiredTop = modalPosition.top - modalHeight / 2;
+  const maxTop = window.innerHeight - modalHeight - 24;
+  const finalTop = Math.max(24, Math.min(desiredTop, maxTop));
+
+  modal.style.top = `${finalTop}px`;
+}, [detail, modalPosition]);
   
   const detailText = detail && (PROD_DETAIL[detail.id] || detail.note || {
     en: "A traditional Mow Lee specialty, prepared by hand at 774 Commercial Street.",
