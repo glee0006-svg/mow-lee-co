@@ -44,7 +44,7 @@ const [current, setCurrent] = useState(0);
         <img
           src={images[current]}
           alt={alt || placeholder}
-          loading="lazy"
+          loading={gallery ? "eager" : "lazy"}
           decoding="async"
           style={{
   width: "100%",
