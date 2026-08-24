@@ -376,7 +376,9 @@ onKeyDown={(e) => {
   role="dialog"
   aria-modal="true"
   onClick={(e) => e.stopPropagation()}
-  onPointerDown={(e) => e.stopPropagation()}
+  onClick={(e) => e.stopPropagation()}
+onPointerDown={(e) => e.stopPropagation()}
+onTouchStart={(e) => e.stopPropagation()}
 >
             <button
   className="prod-modal-x"
