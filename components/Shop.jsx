@@ -242,11 +242,6 @@ export default function Shop() {
     left = modalPosition.left - modalWidth - gap;
   }
 
-  top = Math.max(
-    gap,
-    Math.min(top, window.innerHeight - modalHeight - gap)
-  );
-
   modal.style.left = `${left}px`;
   modal.style.top = `${top}px`;
 }, [detail, modalPosition]);
