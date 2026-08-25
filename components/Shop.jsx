@@ -1,6 +1,5 @@
 "use client";
 
-import { createPortal } from "react-dom";
 import { useEffect, useLayoutEffect, useRef, useState } from "react";
 import { I18N, CATEGORIES } from "@/lib/i18n";
 import { useApp } from "@/lib/store";
@@ -236,12 +235,15 @@ export default function Shop() {
   const modalHeight = modal.offsetHeight;
   const gap = 16;
 
-  let left = modalPosition.left;
-  let top = modalPosition.top;
+  const { rowLeft, rowRight, rowTop, rowHeight } = modalPosition;
 
-  if (left + modalWidth > window.innerWidth - gap) {
-    left = modalPosition.left - modalWidth - gap;
-  }
+const isLeftColumn = rowLeft < window.innerWidth / 2;
+
+let left = isLeftColumn
+  ? rowRight + gap
+  : rowLeft - modalWidth - gap;
+
+let top = rowTop + rowHeight / 2 - modalHeight / 2;
 
   modal.style.left = `${left}px`;
   modal.style.top = `${top}px`;
@@ -305,9 +307,8 @@ export default function Shop() {
   const rect = e.currentTarget.getBoundingClientRect();
 
   setModalPosition({
-  top: rect.top,
-  left: rect.right + 16,
-});
+    top: rect.top + rect.height / 2,
+  });
 
   setDetail(it);
 }}
@@ -367,9 +368,7 @@ onKeyDown={(e) => {
         ))}
       </div>
 
-      {detail &&
-  typeof document !== "undefined" &&
-  createPortal(
+      {detail && (
     <div
       className="prod-modal-bg"
   onClick={(e) => {
@@ -442,8 +441,7 @@ onTouchStart={(e) => e.stopPropagation()}
             </div>
           </div>
         </div>
-      )
-}
+      )}
     </section>
   );
 }
