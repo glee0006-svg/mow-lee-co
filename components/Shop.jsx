@@ -229,14 +229,7 @@ export default function Shop() {
   useLayoutEffect(() => {
   if (!detail || !modalRef.current || !modalPosition) return;
 
-  const modal = modalRef.current;
-  const modalHeight = modal.offsetHeight;
-
-  const desiredTop = modalPosition.top - modalHeight / 2;
-  const maxTop = window.innerHeight - modalHeight - 24;
-  const finalTop = Math.max(24, Math.min(desiredTop, maxTop));
-
-  modal.style.top = `${finalTop}px`;
+  modalRef.current.style.top = `${modalPosition.top}px`;
 }, [detail, modalPosition]);
   
   const detailText = detail && (PROD_DETAIL[detail.id] || detail.note || {
