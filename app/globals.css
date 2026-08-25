@@ -930,7 +930,7 @@ body.zh .cat-tab { font-family: var(--hanzi); letter-spacing: 0.1em; font-size: 
 
 /* Product detail modal */
 .prod-modal-bg {
-  position: fixed; inset: 0;
+  position: absolute; inset: 0;
   background: rgba(30,8,14,0.55);
   backdrop-filter: blur(2px);
   z-index: 200;
