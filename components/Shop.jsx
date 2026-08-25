@@ -225,12 +225,6 @@ export default function Shop() {
     window.addEventListener("keydown", onKey);
     return () => window.removeEventListener("keydown", onKey);
   }, [detail]);
-
-  useLayoutEffect(() => {
-  if (!detail || !modalRef.current || !modalPosition) return;
-
-  modalRef.current.style.top = `${modalPosition.top}px`;
-}, [detail, modalPosition]);
   
   const detailText = detail && (PROD_DETAIL[detail.id] || detail.note || {
     en: "A traditional Mow Lee specialty, prepared by hand at 774 Commercial Street.",
@@ -286,20 +280,12 @@ export default function Shop() {
                   key={it.id}
                   role="button"
                   tabIndex={0}
-                  onClick={(e) => {
-  const rect = e.currentTarget.getBoundingClientRect();
-  setModalPosition({
-    top: rect.top + rect.height / 2,
-  });
+                  onClick={() => {
   setDetail(it);
 }}
 onKeyDown={(e) => {
   if (e.key === "Enter" || e.key === " ") {
     e.preventDefault();
-    const rect = e.currentTarget.getBoundingClientRect();
-    setModalPosition({
-      top: rect.top + rect.height / 2,
-    });
     setDetail(it);
   }
 }}
