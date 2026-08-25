@@ -252,7 +252,7 @@ export default function Shop() {
   });
 
   return (
-    <section id="products" className="shop-block" data-screen-label="03 Shop">
+    <section id="products" className="shop-block" data-screen-label="03 Shop" style={{ position: "static" }}>
       <div className="wrap">
         <div className="section-eyebrow">
           <span className="rule" />
