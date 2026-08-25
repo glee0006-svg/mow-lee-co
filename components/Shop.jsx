@@ -211,7 +211,6 @@ export default function Shop() {
   const { addToCart, setQty, cart, addedFlash } = useApp();
   const [active, setActive] = useState("all");
   const [detail, setDetail] = useState(null);
-  const [modalPosition, setModalPosition] = useState(null);
   const modalRef = useRef(null);
   const cats = active === "all" ? CATEGORIES : CATEGORIES.filter((c) => c.id === active);
   const qtyOf = (id) => {
@@ -280,11 +279,7 @@ export default function Shop() {
                   key={it.id}
                   role="button"
                   tabIndex={0}
-                  onClick={(e) => {
-  const rect = e.currentTarget.getBoundingClientRect();
-  setModalPosition({
-    top: rect.top + rect.height / 2,
-  });
+                  onClick={() => {
   setDetail(it);
 }}
 onKeyDown={(e) => {
@@ -349,7 +344,6 @@ onKeyDown={(e) => {
   onClick={(e) => {
     if (e.target === e.currentTarget) {
       setDetail(null);
-      setModalPosition(null);
     }
   }}
 >
@@ -367,7 +361,6 @@ onTouchStart={(e) => e.stopPropagation()}
   className="prod-modal-x"
   onClick={() => {
     setDetail(null);
-    setModalPosition(null);
   }}
   aria-label="Close"
 >
