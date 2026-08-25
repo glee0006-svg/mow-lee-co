@@ -309,9 +309,9 @@ export default function Shop() {
   const rect = e.currentTarget.getBoundingClientRect();
 
   setModalPosition({
-    top: rect.top,
-    left: rect.right + 16,
-  });
+  top: rect.top + window.scrollY,
+  left: rect.right + 16,
+});
 
   setDetail(it);
 }}
