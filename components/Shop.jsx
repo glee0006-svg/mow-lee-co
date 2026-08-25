@@ -211,6 +211,7 @@ export default function Shop() {
   const { addToCart, setQty, cart, addedFlash } = useApp();
   const [active, setActive] = useState("all");
   const [detail, setDetail] = useState(null);
+  const [modalPosition, setModalPosition] = useState(null);
   const modalRef = useRef(null);
   const cats = active === "all" ? CATEGORIES : CATEGORIES.filter((c) => c.id === active);
   const qtyOf = (id) => {
@@ -224,6 +225,31 @@ export default function Shop() {
     window.addEventListener("keydown", onKey);
     return () => window.removeEventListener("keydown", onKey);
   }, [detail]);
+
+  useLayoutEffect(() => {
+  if (!detail || !modalRef.current || !modalPosition) return;
+
+  const modal = modalRef.current;
+
+  const modalWidth = modal.offsetWidth;
+  const modalHeight = modal.offsetHeight;
+  const gap = 16;
+
+  let left = modalPosition.left;
+  let top = modalPosition.top;
+
+  if (left + modalWidth > window.innerWidth - gap) {
+    left = modalPosition.left - modalWidth - gap;
+  }
+
+  top = Math.max(
+    gap,
+    Math.min(top, window.innerHeight - modalHeight - gap)
+  );
+
+  modal.style.left = `${left}px`;
+  modal.style.top = `${top}px`;
+}, [detail, modalPosition]);
   
   const detailText = detail && (PROD_DETAIL[detail.id] || detail.note || {
     en: "A traditional Mow Lee specialty, prepared by hand at 774 Commercial Street.",
@@ -279,7 +305,14 @@ export default function Shop() {
                   key={it.id}
                   role="button"
                   tabIndex={0}
-                  onClick={() => {
+                  onClick={(e) => {
+  const rect = e.currentTarget.getBoundingClientRect();
+
+  setModalPosition({
+    top: rect.top,
+    left: rect.right + 16,
+  });
+
   setDetail(it);
 }}
 onKeyDown={(e) => {
