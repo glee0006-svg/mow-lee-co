@@ -1,5 +1,6 @@
 "use client";
 
+import { createPortal } from "react-dom";
 import { useEffect, useLayoutEffect, useRef, useState } from "react";
 import { I18N, CATEGORIES } from "@/lib/i18n";
 import { useApp } from "@/lib/store";
@@ -366,9 +367,11 @@ onKeyDown={(e) => {
         ))}
       </div>
 
-      {detail && (
-        <div
-  className="prod-modal-bg"
+      {detail &&
+  typeof document !== "undefined" &&
+  createPortal(
+    <div
+      className="prod-modal-bg"
   onClick={(e) => {
     if (e.target === e.currentTarget) {
       setDetail(null);
@@ -439,7 +442,8 @@ onTouchStart={(e) => e.stopPropagation()}
             </div>
           </div>
         </div>
-      )}
+      )
+}
     </section>
   );
 }
