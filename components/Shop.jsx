@@ -250,12 +250,13 @@ left = Math.max(
   Math.min(left, window.innerWidth - modalWidth - 16)
 );
 
-let top = rowTop + rowHeight / 2 - modalHeight / 2;
+    let top = rowTop + rowHeight / 2 - modalHeight / 2;
+
 top = Math.max(
   16,
   Math.min(top, window.innerHeight - modalHeight - 16)
 );
-
+    
   modal.style.left = `${left}px`;
   modal.style.top = `${top}px`;
 }, [detail, modalPosition]);
