@@ -307,7 +307,10 @@ let top = rowTop + rowHeight / 2 - modalHeight / 2;
   const rect = e.currentTarget.getBoundingClientRect();
 
   setModalPosition({
-    top: rect.top + rect.height / 2,
+    rowLeft: rect.left,
+    rowRight: rect.right,
+    rowTop: rect.top,
+    rowHeight: rect.height,
   });
 
   setDetail(it);
@@ -315,6 +318,16 @@ let top = rowTop + rowHeight / 2 - modalHeight / 2;
 onKeyDown={(e) => {
   if (e.key === "Enter" || e.key === " ") {
     e.preventDefault();
+
+    const rect = e.currentTarget.getBoundingClientRect();
+
+    setModalPosition({
+      rowLeft: rect.left,
+      rowRight: rect.right,
+      rowTop: rect.top,
+      rowHeight: rect.height,
+    });
+
     setDetail(it);
   }
 }}
