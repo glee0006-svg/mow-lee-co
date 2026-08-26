@@ -945,7 +945,7 @@ body.zh .cat-tab { font-family: var(--hanzi); letter-spacing: 0.1em; font-size: 
 }
 
 .prod-modal {
-  position: fixed;
+  position: absolute;
   background: var(--paper);
   border: 1.5px solid var(--ink);
   outline: 1.5px solid var(--ink);
