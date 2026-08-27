@@ -1604,7 +1604,7 @@ body.zh .lineage-addr-note { font-family: var(--hanzi); font-style: normal; }
 }
 /* Skip painting below-the-fold sections until they near the viewport.
    `contain-intrinsic-size` reserves space so the scrollbar doesn't jump. */
-.story-block, .shop-block, .craft-block, .visit-block, .footer {
+.story-block, .craft-block, .visit-block, .footer {
   content-visibility: auto;
   contain-intrinsic-size: 1px 900px;
 }
