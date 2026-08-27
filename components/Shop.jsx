@@ -408,7 +408,6 @@ onKeyDown={(e) => {
   role="dialog"
   aria-modal="true"
   onClick={(e) => e.stopPropagation()}
-  onClick={(e) => e.stopPropagation()}
 onPointerDown={(e) => e.stopPropagation()}
 onTouchStart={(e) => e.stopPropagation()}
 >
@@ -449,32 +448,7 @@ onTouchStart={(e) => e.stopPropagation()}
                     <span className="lang-zh">{detail.unit === "lb" ? "每磅" : "每隻"}</span>
                   </div>
                 </div>
-               <button
-  {qtyOf(detail.id) > 0 ? (
-  <div
-    className="qty-stepper modal-qty-stepper"
-    onClick={(e) => e.stopPropagation()}
-  >
-    <button
-      type="button"
-      onClick={() => setQty(detail.id, qtyOf(detail.id) - 1)}
-      aria-label="Decrease quantity"
-    >
-      −
-    </button>
-
-    <span className="n">{qtyOf(detail.id)}</span>
-
-    <button
-      type="button"
-      onClick={() => setQty(detail.id, qtyOf(detail.id) + 1)}
-      aria-label="Increase quantity"
-    >
-      +
-    </button>
-  </div>
-) : (
-  {qtyOf(detail.id) > 0 ? (
+               {qtyOf(detail.id) > 0 ? (
   <div
     className="qty-stepper modal-qty-stepper"
     onClick={(e) => e.stopPropagation()}
@@ -512,10 +486,6 @@ onTouchStart={(e) => e.stopPropagation()}
     <span className="arrow">→</span>
   </button>
 )}
-                  <span className="lang-en">+ {I18N.shop.add.en}{qtyOf(detail.id) > 0 ? ` (${qtyOf(detail.id)})` : ""}</span>
-                  <span className="lang-zh">+ {I18N.shop.add.zh}{qtyOf(detail.id) > 0 ? `（${qtyOf(detail.id)}）` : ""}</span>
-                  <span className="arrow">→</span>
-                </button>
               </div>
             </div>
           </div>
