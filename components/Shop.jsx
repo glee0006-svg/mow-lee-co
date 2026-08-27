@@ -474,6 +474,30 @@ onTouchStart={(e) => e.stopPropagation()}
     </button>
   </div>
 ) : (
+  {qtyOf(detail.id) > 0 ? (
+  <div
+    className="qty-stepper modal-qty-stepper"
+    onClick={(e) => e.stopPropagation()}
+  >
+    <button
+      type="button"
+      onClick={() => setQty(detail.id, qtyOf(detail.id) - 1)}
+      aria-label="Decrease quantity"
+    >
+      −
+    </button>
+
+    <span className="n">{qtyOf(detail.id)}</span>
+
+    <button
+      type="button"
+      onClick={() => setQty(detail.id, qtyOf(detail.id) + 1)}
+      aria-label="Increase quantity"
+    >
+      +
+    </button>
+  </div>
+) : (
   <button
     type="button"
     className="btn solid"
