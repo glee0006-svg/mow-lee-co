@@ -311,8 +311,9 @@ top = Math.max(
             <div className="prod-list">
               {cat.items.map((it) => (
                 <div
-                  className="prod-row"
-                  key={it.id}
+  id={`product-${it.id}`}
+  className="prod-row"
+  key={it.id}
                   role="button"
                   tabIndex={0}
                   onClick={(e) => {
