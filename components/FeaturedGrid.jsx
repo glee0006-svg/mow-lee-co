@@ -59,12 +59,20 @@ const PRODUCT_IMAGES = {
   className="feat-card"
   key={it.id}
   onClick={() => {
-    if (onProductClick) {
-      onProductClick(it);
-    } else if (navTo) {
-      navTo("products");
-    }
-  }}
+  const el = document.getElementById(`product-${it.id}`);
+
+  if (el) {
+    const y =
+      el.getBoundingClientRect().top +
+      window.scrollY -
+      100;
+
+    window.scrollTo({
+      top: y,
+      behavior: "smooth",
+    });
+  }
+}}
 >
               <div className="image-ph" onClick={(e) => e.stopPropagation()}>
                 <ImageSlot
