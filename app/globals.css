@@ -1200,6 +1200,21 @@ body.zh .prod-row .name .note { font-family: var(--hanzi); font-style: normal; }
   border-right: 1px solid var(--ink);
 }
 
+.modal-qty-stepper {
+  min-width: 112px;
+  height: 42px;
+}
+
+.modal-qty-stepper button {
+  width: 36px;
+  height: 42px;
+}
+
+.modal-qty-stepper .n {
+  min-width: 40px;
+  height: 42px;
+}
+
 /* CRAFT ----------------------------------------------------------------- */
 .craft-block {
   background: var(--oxblood);
