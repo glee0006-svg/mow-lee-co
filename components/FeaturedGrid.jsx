@@ -43,7 +43,7 @@ const PRODUCT_IMAGES = {
   ],
 };
   return (
-    <section style={{ paddingTop: 56 }}>
+    <section id="featured-products" style={{ paddingTop: 56 }}>
       <div className="wrap">
         <div className="section-eyebrow">
           <span className="rule" />
