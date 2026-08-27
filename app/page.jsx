@@ -19,13 +19,19 @@ export default function Page() {
   const { lang } = useApp();
 
   const navTo = (id) => {
-    if (id === "top") { window.scrollTo({ top: 0, behavior: "smooth" }); return; }
-    const el = document.getElementById(id);
-    if (el) {
-      const y = el.getBoundingClientRect().top + window.scrollY - 70;
-      window.scrollTo({ top: y, behavior: "smooth" });
-    }
-  };
+  if (id === "top") {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+    return;
+  }
+
+  const targetId = id === "products" ? "featured-products" : id;
+  const el = document.getElementById(targetId);
+
+  if (el) {
+    const y = el.getBoundingClientRect().top + window.scrollY - 70;
+    window.scrollTo({ top: y, behavior: "smooth" });
+  }
+};
 
   return (
     <div className="app" id="top">
