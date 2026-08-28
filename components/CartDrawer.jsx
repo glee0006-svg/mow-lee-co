@@ -31,8 +31,16 @@ export default function CartDrawer() {
           ) : (
             cart.map((l) => (
               <div className="cart-line" key={l.id}>
-                <div>
-                  <div className="ln-zh">{l.zh}</div>
+  <div className="cart-line-image">
+    <img
+      src={l.image}
+      alt={l.en}
+    />
+  </div>
+
+  <div>
+    <div className="ln-zh">{l.zh}</div>
+    
                   <div className="ln-en">{l.en}</div>
                   <div className="qty">
                     <button onClick={() => setQty(l.id, l.qty - 1)} aria-label="Decrease">−</button>
