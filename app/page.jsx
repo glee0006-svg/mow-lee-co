@@ -9,7 +9,6 @@ import FeaturedGrid from "@/components/FeaturedGrid";
 import StoryTeaser from "@/components/StoryTeaser";
 import FeaturedIn from "@/components/FeaturedIn";
 import Shop from "@/components/Shop";
-import Craft from "@/components/Craft";
 import Visit from "@/components/Visit";
 import Footer from "@/components/Footer";
 import CartDrawer from "@/components/CartDrawer";
@@ -45,7 +44,6 @@ export default function Page() {
 <FeaturedIn />
       <SectionDivider variant="on-cream" />
       <Shop />
-      <Craft />
       <SectionDivider />
       <Visit />
       <Footer />
