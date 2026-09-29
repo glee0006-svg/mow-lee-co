@@ -3,6 +3,7 @@
 import { useApp } from "@/lib/store";
 import TopBar from "@/components/TopBar";
 import Story from "@/components/Story";
+import Craft from "@/components/Craft";
 import Footer from "@/components/Footer";
 
 export default function OurHistoryPage() {
@@ -32,8 +33,9 @@ export default function OurHistoryPage() {
   return (
     <div className="app" id="top">
       <TopBar navTo={navTo} />
-      <Story />
-      <Footer />
+<Story />
+<Craft />
+<Footer />
     </div>
   );
 }
