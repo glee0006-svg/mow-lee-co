@@ -48,8 +48,8 @@ const PRODUCT_IMAGES = {
         <div className="section-eyebrow">
           <span className="rule" />
           <span className="label">
-            <span className="lang-en">Featured Selections</span>
-            <span className="lang-zh">本號精選</span>
+            <span className="lang-en">Featured Products</span>
+<span className="lang-zh">精選產品</span>
           </span>
           <span className="rule" />
         </div>
