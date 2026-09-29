@@ -6,6 +6,7 @@ import Hero from "@/components/Hero";
 import Ticker from "@/components/Ticker";
 import WhyUs from "@/components/WhyUs";
 import FeaturedGrid from "@/components/FeaturedGrid";
+import StoryTeaser from "@/components/StoryTeaser";
 import FeaturedIn from "@/components/FeaturedIn";
 import Shop from "@/components/Shop";
 import Craft from "@/components/Craft";
@@ -40,6 +41,7 @@ export default function Page() {
       <WhyUs />
       <SectionDivider />
       <FeaturedGrid navTo={navTo} />
+<StoryTeaser />
 <FeaturedIn />
       <SectionDivider variant="on-cream" />
       <Shop />
