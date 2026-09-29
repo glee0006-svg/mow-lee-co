@@ -35,10 +35,10 @@ export default function TopBar({ navTo }) {
             </Link>
           </div>
           <nav className="nav" aria-label="primary">
-            <a href="/#story" onClick={anchor("story")}>
-              <span className="lang-en">{I18N.nav.story.en}</span>
-              <span className="lang-zh">{I18N.nav.story.zh}</span>
-            </a>
+            <Link href="/our-history">
+  <span className="lang-en">{I18N.nav.story.en}</span>
+  <span className="lang-zh">{I18N.nav.story.zh}</span>
+</Link>
             <Link href="/lineage">
               <span className="lang-en">Lineage</span>
               <span className="lang-zh">家族傳承</span>
