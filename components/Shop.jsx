@@ -208,7 +208,7 @@ const PRODUCT_IMAGES = {
 };
 
 export default function Shop() {
-  const { addToCart, setQty, cart, addedFlash } = useApp();
+  const { addToCart, setQty, cart, addedFlash, openCart } = useApp();
   const [active, setActive] = useState("all");
   const [detail, setDetail] = useState(null);
   const [modalPosition, setModalPosition] = useState(null);
@@ -380,7 +380,11 @@ onKeyDown={(e) => {
                     ) : (
                       <button
                         className={"add-btn " + (addedFlash === it.id ? "added" : "")}
-                        onClick={(e) => { e.stopPropagation(); addToCart(it); }}
+                        onClick={(e) => {
+  e.stopPropagation();
+  addToCart(it);
+  openCart();
+}}
                       >
                         <span className="lang-en">+ {I18N.shop.add.en}</span>
                         <span className="lang-zh">+ {I18N.shop.add.zh}</span>
