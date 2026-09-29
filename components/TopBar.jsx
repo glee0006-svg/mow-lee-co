@@ -47,10 +47,10 @@ export default function TopBar({ navTo }) {
               <span className="lang-en">{I18N.nav.products.en}</span>
               <span className="lang-zh">{I18N.nav.products.zh}</span>
             </a>
-            <a href="/#craft" onClick={anchor("craft")}>
-              <span className="lang-en">{I18N.nav.craft.en}</span>
-              <span className="lang-zh">{I18N.nav.craft.zh}</span>
-            </a>
+           <Link href="/our-history#craft">
+  <span className="lang-en">{I18N.nav.craft.en}</span>
+  <span className="lang-zh">{I18N.nav.craft.zh}</span>
+</Link>
             <a href="/#visit" onClick={anchor("visit")}>
               <span className="lang-en">{I18N.nav.visit.en}</span>
               <span className="lang-zh">{I18N.nav.visit.zh}</span>
