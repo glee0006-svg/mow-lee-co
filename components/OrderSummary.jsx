@@ -7,6 +7,8 @@ const PRODUCT_IMAGES = {
   d03: "/Salt Duck Leg.jpg",
   d04: "/soy-test.jpg",
   d05: "/whole-cured-duck.jpg",
+  s1: "/Pork Sausage 1.png",
+  s3: "/Duck Liver Sausage 1.png",
 };
 
 /**
