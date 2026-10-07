@@ -17,7 +17,7 @@ const PRODUCT_IMAGES = {
  * inline qty edits + remove only on the first step (controlled via
  * `editable` prop) so customers can't change the cart mid-payment.
  */
-export default function OrderSummary({ editable = false, shipping = 0, taxRate = 0.0875 }) {
+export default function OrderSummary({ editable = false, shipping = 35, taxRate = 0.0875 }) {
   const { cart, setQty, removeLine, subtotal } = useApp();
   const tax = subtotal * taxRate;
   const total = subtotal + shipping + tax;
@@ -88,7 +88,7 @@ export default function OrderSummary({ editable = false, shipping = 0, taxRate =
         </div>
         <div className="os-row">
           <span><span className="lang-en">Shipping</span><span className="lang-zh">郵寄</span></span>
-          <span>TBD</span>
+          <span>$35.00</span>
         </div>
         <div className="os-row">
           <span><span className="lang-en">Estimated tax</span><span className="lang-zh">預估稅項</span></span>
