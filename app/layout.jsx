@@ -1,14 +1,14 @@
 import "./globals.css";
 import { AppProvider } from "@/lib/store";
 
-const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || "https://mowleeco.com";
+const SITE_URL = "https://www.mowlee.com";
 
 export const metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
-    default: "茂利號腊味 · Mow Lee & Co. — Traditional Chinese Cured Meats Since 1856",
-    template: "%s · Mow Lee & Co.",
-  },
+  default: "Mow Lee & Co. | Traditional Chinese Cured Meats Since 1856",
+  template: "%s | Mow Lee & Co.",
+},
   description:
     "Six generations of traditional Chinese cured meats — lap cheong, cured pork belly, whole roast duck — hand-hung and oven-dried at 774 Commercial Street, San Francisco Chinatown since 1856.",
   keywords: [
