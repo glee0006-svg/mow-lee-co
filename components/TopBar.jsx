@@ -30,7 +30,9 @@ export default function TopBar({ navTo }) {
           <div className="brand-stack" style={{ justifySelf: "start" }}>
             <Link href="/" style={{ display: "flex", alignItems: "baseline", gap: 14 }}>
               <span className="hanzi">茂利號</span>
-              <span style={{ fontFamily: "var(--display)" }}>Mow Lee &amp; Co.</span>
+              <span style={{ fontFamily: "var(--display)" }}>
+  Mow Lee &amp; Co.<sup style={{ fontSize: "0.5em", marginLeft: "2px", verticalAlign: "super" }}>™</sup>
+</span>
               <span className="est">EST. 1856</span>
             </Link>
           </div>
